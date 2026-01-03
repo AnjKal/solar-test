@@ -1,259 +1,160 @@
+from pathlib import Path
+
 import streamlit as st
 import torch
-import numpy as np
 import pandas as pd
-import plotly.graph_objects as go
+import numpy as np
 from torch.distributions import Categorical
-import shap
 
-from shap_utils import PPOPolicyWrapper, get_shap_explainer
 from microgrid_env import MicrogridEnv
 from ppo_agent import ActorCritic
+from shap_utils import PPOPolicySHAP
 
+# --------------------------------------------------
+# CONFIG
+# --------------------------------------------------
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models" / "ppo_microgrid_final.pth"
+DECISIONS_PATH = BASE_DIR / "ppo_decisions.csv"
 
-# ============================================================
-# STREAMLIT CONFIG
-# ============================================================
+ACTION_MAP = {
+    0: "Grid-connected (Idle)",
+    1: "Grid + Charge Battery",
+    2: "Grid + Discharge Battery",
+    3: "Island Mode (Conservative)",
+    4: "Island Mode (Aggressive)",
+    5: "Safe Shutdown"
+}
+
 st.set_page_config(
-    page_title="AI Microgrid EMS",
-    layout="wide",
-    initial_sidebar_state="collapsed"
+    page_title="PPO Microgrid Decisions + Explainability",
+    layout="wide"
 )
 
-st.markdown("""
-<style>
-html, body, [class*="css"] {
-    background-color: #020617;
-    color: #e5e7eb;
-    font-family: 'Inter', sans-serif;
-}
-.glass {
-    background: rgba(255,255,255,0.04);
-    border-radius: 18px;
-    padding: 20px;
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-}
-.subtle {
-    color: #94a3b8;
-    font-size: 14px;
-}
-button {
-    border-radius: 14px !important;
-}
-</style>
-""", unsafe_allow_html=True)
+# --------------------------------------------------
+# LOAD ENV + DATA
+# --------------------------------------------------
+def load_decisions() -> pd.DataFrame:
+    if not DECISIONS_PATH.exists():
+        st.error(
+            "❌ PPO decisions not found. Start the scheduler via `python microgrid_scheduler.py`."
+        )
+        st.stop()
 
+    return pd.read_csv(DECISIONS_PATH)
 
-# ============================================================
-# LOAD DATA + MODEL
-# ============================================================
-DATASET_PATH = "synthetic_microgrid_dataset.csv"
-MODEL_PATH = "models/ppo_microgrid_final.pth"
+decisions_df = load_decisions()
 
-df = pd.read_csv(DATASET_PATH)
-env = MicrogridEnv(DATASET_PATH)
-
+env = MicrogridEnv(str(DECISIONS_PATH))
+obs_columns = env.observation_columns
 obs_dim = env.observation_space.shape[0]
 action_dim = env.action_space.n
+
+df = decisions_df.copy()
+
+# --------------------------------------------------
+# LOAD MODEL
+# --------------------------------------------------
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = ActorCritic(obs_dim, action_dim).to(device)
 model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 model.eval()
 
-
-# ============================================================
-# SESSION STATE
-# ============================================================
-if "maintenance" not in st.session_state:
-    st.session_state.maintenance = []
-
-
-# ============================================================
-# HEADER
-# ============================================================
-st.markdown("""
-<div class="glass">
-  <h1>⚡ AI-Driven Microgrid Energy Management System</h1>
-  <p class="subtle">
-    PPO-controlled microgrid with safety constraints and explainability
-  </p>
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-
-# ============================================================
-# MAINTENANCE UI
-# ============================================================
-col1, col2 = st.columns([2, 1])
-
-with col1:
-    st.markdown('<div class="glass">', unsafe_allow_html=True)
-    st.subheader("🛠 Maintenance Scheduling")
-
-    start_h, end_h = st.slider(
-        "Repair Window (Hours)",
-        0, 23, (10, 14),
-        label_visibility="collapsed"
-    )
-
-    if st.button("Add Maintenance Window"):
-        st.session_state.maintenance.append((start_h, end_h))
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with col2:
-    st.markdown('<div class="glass">', unsafe_allow_html=True)
-    st.subheader("Active Windows")
-
-    if st.session_state.maintenance:
-        for s, e in st.session_state.maintenance:
-            st.markdown(f"🟥 **Hour {s} → {e}**")
-    else:
-        st.markdown("_None_")
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-
-# ============================================================
-# RUN PPO POLICY
-# ============================================================
-env.reset()
-# env.set_maintenance_schedule(st.session_state.maintenance)
-
-actions = []
-rewards = []
-
-obs = env.reset()
-
-# SHAP background (ONLY here)
-background = df.sample(100).values[:, :obs_dim]
-
-for t in range(24):
-    obs_tensor = torch.tensor(obs, dtype=torch.float32).to(device)
-
-    logits, _ = model(obs_tensor)
-    dist = Categorical(logits=logits)
-    action = dist.probs.argmax().item()
-
-    obs, reward, done, _ = env.step(action)
-
-    actions.append(action)
-    rewards.append(reward)
-
-
-# ============================================================
-# ACTION TIMELINE PLOT
-# ============================================================
-fig = go.Figure()
-
-fig.add_trace(go.Scatter(
-    y=actions,
-    mode="lines+markers",
-    name="PPO Action",
-    line=dict(width=4)
-))
-
-for s, e in st.session_state.maintenance:
-    fig.add_vrect(
-        x0=s, x1=e,
-        fillcolor="red",
-        opacity=0.25,
-        layer="below",
-        line_width=0
-    )
-
-fig.update_layout(
-    template="plotly_dark",
-    height=420,
-    xaxis_title="Hour",
-    yaxis_title="Action ID",
-    title="PPO Decision Schedule with Safety Overrides"
-)
-
-st.plotly_chart(fig, use_container_width=True)
-
-
-# ============================================================
-# SHAP EXPLAINABILITY
-# ============================================================
-st.markdown("<br>", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="glass">
-<h3>🔍 Why did the PPO choose this action?</h3>
-<p class="subtle">
-Local explanation of the PPO policy logits
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-# Explain LAST action
-last_action = actions[-1]
-current_state = np.array(obs).reshape(1, -1)
-
-explainer = get_shap_explainer(
+# --------------------------------------------------
+# INIT SHAP EXPLAINER
+# --------------------------------------------------
+shap_explainer = PPOPolicySHAP(
     model=model,
+    observation_columns=obs_columns,
     device=device,
-    background=background,
-    action_idx=last_action
+)
+shap_explainer.initialize(df)
+
+# --------------------------------------------------
+# UI HEADER
+# --------------------------------------------------
+st.title("⚡ PPO Microgrid Decision Viewer with Explainability")
+st.markdown(
+    "Each row represents a **microgrid state**. "
+    "The PPO agent selects an action. "
+    "Click **Explain** to see why."
 )
 
-shap_values = explainer.shap_values(
-    current_state,
-    nsamples=200
+# --------------------------------------------------
+# VALIDATION
+# --------------------------------------------------
+if df.empty:
+    st.error("❌ PPO decisions dataset is empty.")
+    st.stop()
+
+missing = set(obs_columns) - set(df.columns)
+if missing:
+    st.error(f"❌ Missing required columns in PPO decisions file: {missing}")
+    st.stop()
+
+# --------------------------------------------------
+# INFERENCE + DISPLAY
+# --------------------------------------------------
+st.subheader("🤖 PPO Decisions")
+
+action_ids = []
+action_labels = []
+state_values = []
+
+for _, row in df.iterrows():
+    obs = row[obs_columns].values.astype(np.float32)
+    obs_tensor = torch.tensor(obs).to(device)
+
+    with torch.no_grad():
+        logits, value = model(obs_tensor)
+        dist = Categorical(logits=logits)
+        action = torch.argmax(dist.probs).item()
+
+    action_ids.append(action)
+    action_labels.append(ACTION_MAP[action])
+    state_values.append(round(value.item(), 3))
+
+df["action_id"] = action_ids
+df["action_label"] = action_labels
+df["state_value"] = state_values
+
+summary_columns = [
+    "action_id",
+    "action_label",
+    "state_value",
+] + obs_columns
+
+st.dataframe(df[summary_columns], use_container_width=True)
+
+selected_index = st.selectbox(
+    "Select a state for explainability",
+    options=df.index,
+    format_func=lambda idx: f"Row {idx} • {df.loc[idx, 'action_label']}"
 )
 
-feature_names = [
-    "Hour (sin)",
-    "Hour (cos)",
-    "Day (sin)",
-    "Day (cos)",
-    "Is Weekend",
-
-    "Solar Actual (kW)",
-    "Solar Forecast t+1 (kW)",
-    "Solar Forecast t+4 (kW)",
-
-    "Load Priority 1 (kW)",
-    "Load Priority 2 (kW)",
-    "Load Priority 3 (kW)",
-
-    "Battery SOC",
-
-    "Grid Status",
-    "Blackout Probability",
-    "Blackout Type",
-
-    "Maintenance Active"
-]
-
-
-shap.initjs()
-
-import matplotlib.pyplot as plt
-
-shap.waterfall_plot(
-    shap.Explanation(
-        values=shap_values[0],
-        base_values=explainer.expected_value,
-        data=current_state[0],
-        feature_names=feature_names
-    ),
-    show=False
-)
-
-fig = plt.gcf()   # ⬅️ get current Figure
-st.pyplot(fig, bbox_inches="tight")
-plt.close(fig)
-
-
-if df.iloc[env.current_step - 1]["maintenance_active"] == 1:
-    st.info(
-        "Explanation shown is hypothetical. "
-        "Final action overridden due to maintenance safety constraints."
+if st.button("🧠 Explain Selected Decision"):
+    explanation_df, shap_values = shap_explainer.explain_state(
+        df.loc[selected_index],
+        int(df.loc[selected_index, "action_id"]),
     )
+
+    st.markdown("### 🔍 Decision Explainability")
+
+    colA, colB = st.columns(2)
+
+    with colA:
+        st.markdown("#### 📊 Feature Contributions")
+        st.dataframe(explanation_df.head(10), use_container_width=True)
+
+    with colB:
+        st.markdown("#### 📈 SHAP Bar Plot")
+        fig_bar = shap_explainer.plot_bar(explanation_df)
+        st.pyplot(fig_bar)
+
+    st.markdown("#### 🧠 Decision Waterfall")
+    fig_waterfall = shap_explainer.plot_waterfall(
+        shap_values,
+        int(df.loc[selected_index, "action_id"]),
+    )
+    st.pyplot(fig_waterfall)
