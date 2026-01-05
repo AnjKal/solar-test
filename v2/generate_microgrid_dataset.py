@@ -5,7 +5,7 @@ import os
 # -----------------------------
 # Configuration
 # -----------------------------
-NUM_DAYS = 60                 # number of simulated days
+NUM_DAYS = 365                 # number of simulated days
 HOURS_PER_DAY = 24
 SEED = 42
 
@@ -36,6 +36,17 @@ def residential_load_curve(hour):
     else:
         return 1.0
 
+"""
+Event injection policy (justification):
+We intentionally include planned maintenance windows and occasional high blackout
+probability spikes so the RL agent sees and learns rare-but-critical scenarios.
+Without these events, PPO would under-explore islanding/safety logic and overfit
+to nominal grid-up conditions. We target roughly 3–5% of timesteps affected by
+maintenance and ~1–2% with elevated blackout risk, clustered realistically:
+- Planned maintenance: short daytime windows on selected days
+- Unplanned blackouts: rare spikes, more likely under high load and low solar
+"""
+
 # -----------------------------
 # Dataset generation
 # -----------------------------
@@ -43,14 +54,26 @@ rows = []
 
 battery_soc = 0.6  # initial SOC
 
+# ---------------------------------
+# Precompute maintenance schedule
+# ---------------------------------
+# Choose ~12 days (out of NUM_DAYS) for planned maintenance, each with a
+# 3-hour window concentrated midday. This yields ~36 affected rows over 60 days.
+num_maint_days = max(6, int(0.2 * NUM_DAYS))
+maint_days = np.random.choice(range(NUM_DAYS), size=num_maint_days, replace=False)
+maintenance_schedule = {}
+for d in maint_days:
+    start = np.random.choice(range(10, 15))  # start between 10:00 and 14:00
+    hours = list(range(start, min(start + 3, 24)))
+    maintenance_schedule[d] = hours
+
 for day in range(NUM_DAYS):
     # day-level variability
     solar_scale = np.random.normal(1.0, 0.15)
     load_scale = np.random.normal(1.0, 0.08)
 
-    # random maintenance window (rare)
-    maintenance_day = np.random.rand() < 0.08
-    maintenance_hours = np.random.choice(range(10, 16), size=4, replace=False) if maintenance_day else []
+    # maintenance hours for this day (precomputed schedule)
+    maintenance_hours = maintenance_schedule.get(day, [])
 
     for hour in range(HOURS_PER_DAY):
 
@@ -101,7 +124,21 @@ for day in range(NUM_DAYS):
         # Grid & outage modeling
         # -----------------------------
         maintenance_active = int(hour in maintenance_hours)
-        blackout_probability = np.random.beta(2, 12)
+
+        # Mixture model for blackout probability:
+        # - Mostly nominal Beta(2,12)
+        # - Occasionally spike to high values (>=0.85) to simulate rare events
+        base_bp = np.random.beta(2, 12)
+        spike_event = np.random.rand() < 0.02  # ~2% chance of spike
+        if spike_event:
+            blackout_probability = np.random.uniform(0.85, 1.0)
+        else:
+            blackout_probability = base_bp
+
+        # Correlate higher blackout risk with stressed conditions:
+        # low solar and high load → increase risk slightly
+        if solar_actual < 0.6 and load_total > 7.2:
+            blackout_probability = np.clip(blackout_probability + 0.15, 0.0, 1.0)
 
         if maintenance_active:
             blackout_type = 2  # planned maintenance

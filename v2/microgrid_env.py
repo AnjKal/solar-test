@@ -20,6 +20,7 @@ class MicrogridEnv(gym.Env):
         self.df = pd.read_csv(csv_path)
         self.max_steps = len(self.df)
         self.current_step = 0
+        self.prev_islanded = None
 
         # -------------------------
         # Action Space
@@ -143,6 +144,7 @@ class MicrogridEnv(gym.Env):
         # Penalize unnecessary islanding
         if is_islanded and row["grid_status"] == 1:
             reward -= 5.0
+            reward -= 2.0 * (1.0 - float(row["blackout_probability"]))
 
         # Battery protection
         if battery_soc < 0.25:
@@ -152,8 +154,40 @@ class MicrogridEnv(gym.Env):
         if row["maintenance_active"] == 1 and is_islanded:
             reward -= 200.0
 
+        # Risk preparedness bonus when blackout risk is high and SOC is healthy
+        if float(row["blackout_probability"]) > 0.8 and battery_soc >= 0.6:
+            reward += max(0.0, float(battery_soc) - 0.6)
+
+        # Island efficiency bonus for meeting critical load while islanded
+        if is_islanded and served_p1 >= load_p1:
+            reward += 0.3
+
+        # SOC safety margin penalty while islanded (soft band)
+        if is_islanded and 0.25 <= float(battery_soc) < 0.35:
+            reward -= 1.5
+
+        # Forecast-aware behavior: encourage charging before low solar, discourage discharging
+        low_forecast = (float(row["solar_forecast_t+1_kw"]) + float(row["solar_forecast_t+4_kw"])) < 1.5
+        if row["grid_status"] == 1 and low_forecast:
+            if action == 1:
+                reward += 0.5
+            elif action in [2, 4]:
+                reward -= 0.5
+
+        # Maintenance SOC readiness incentives
+        if row["maintenance_active"] == 1:
+            if float(battery_soc) < 0.5:
+                reward -= 2.0
+            elif float(battery_soc) >= 0.7:
+                reward += (float(battery_soc) - 0.7)
+
+        # Action flapping penalty (toggle between islanded and grid-connected)
+        if self.prev_islanded is not None and bool(self.prev_islanded) != bool(is_islanded):
+            reward -= 0.5
+
         # -------- STEP FORWARD --------
         self.current_step += 1
+        self.prev_islanded = is_islanded
         if self.current_step >= self.max_steps - 1:
             done = True
 
@@ -162,6 +196,7 @@ class MicrogridEnv(gym.Env):
     # -------------------------
     def reset(self):
         self.current_step = 0
+        self.prev_islanded = None
         return self._get_obs()
 
     def render(self, mode="human"):

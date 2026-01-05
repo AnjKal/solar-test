@@ -70,7 +70,19 @@ def run_inference() -> None:
     action_labels = []
     state_values = []
 
-    for _, row in forecast_df.iterrows():
+    for idx, row in forecast_df.iterrows():
+        maintenance_flag = row["maintenance_active"]
+        if pd.notna(maintenance_flag) and int(maintenance_flag) == 1:
+            action = 5
+            action_ids.append(action)
+            action_labels.append(ACTION_MAP[action])
+            state_values.append(np.nan)
+            logging.info(
+                "Maintenance override at row %s; forcing Safe Shutdown without model inference",
+                idx,
+            )
+            continue
+
         obs = row[obs_columns].values.astype(np.float32)
         obs_tensor = torch.tensor(obs).to(device)
 
