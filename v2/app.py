@@ -23,7 +23,8 @@ ACTION_MAP = {
     2: "Grid + Discharge Battery",
     3: "Island Mode (Conservative)",
     4: "Island Mode (Aggressive)",
-    5: "Safe Shutdown"
+    5: "Safe Shutdown",
+    6: "Grid + Discharge (Export)",
 }
 
 st.set_page_config(
@@ -58,7 +59,15 @@ df = decisions_df.copy()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = ActorCritic(obs_dim, action_dim).to(device)
-model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
+state_dict = torch.load(MODEL_PATH, map_location=device)
+try:
+    model.load_state_dict(state_dict)
+except RuntimeError as exc:
+    st.error(
+        "Model weights are incompatible with the current environment action space. "
+        "If you recently changed MicrogridEnv.action_space, retrain using train_ppo.py."
+    )
+    st.stop()
 model.eval()
 
 # --------------------------------------------------

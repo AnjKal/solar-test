@@ -40,6 +40,8 @@ class PPOPolicySHAP:
         x: numpy array (batch_size, obs_dim)
         returns: numpy array (batch_size, action_dim)
         """
+        if isinstance(x, np.ndarray) and x.ndim == 1:
+            x = x.reshape(1, -1)
         x_tensor = torch.tensor(x, dtype=torch.float32).to(self.device)
 
         with torch.no_grad():
@@ -47,6 +49,51 @@ class PPOPolicySHAP:
             probs = torch.softmax(logits, dim=1)
 
         return probs.cpu().numpy()
+
+    def _select_action_shap_values(self, shap_values, action_id: int) -> np.ndarray:
+        """Return a 1D array of SHAP contributions (len = n_features) for one sample/output."""
+
+        values = shap_values.values
+        if values.ndim != 3:
+            raise ValueError(f"Unexpected SHAP values shape: {values.shape}")
+
+        n_features = len(self.observation_columns)
+
+        # Common layouts:
+        # - (samples, features, outputs)
+        # - (outputs, samples, features)
+        if values.shape[0] == 1 and values.shape[1] == n_features:
+            # (samples, features, outputs)
+            return values[0, :, action_id]
+
+        if values.shape[2] == n_features:
+            # (outputs, samples, features)
+            return values[action_id, 0, :]
+
+        raise ValueError(
+            "Unsupported SHAP axis ordering; got values shape "
+            f"{values.shape} with n_features={n_features}"
+        )
+
+    def _select_action_explanation(self, shap_values, action_id: int):
+        """Return a SHAP Explanation slice for one sample/output for plotting."""
+
+        values = shap_values.values
+        n_features = len(self.observation_columns)
+
+        if values.ndim == 3 and values.shape[0] == 1 and values.shape[1] == n_features:
+            # (samples, features, outputs)
+            return shap_values[0, :, action_id]
+
+        if values.ndim == 3 and values.shape[2] == n_features:
+            # (outputs, samples, features)
+            return shap_values[action_id, 0, :]
+
+        # Fallback: try the most common multi-output slicing
+        try:
+            return shap_values[..., action_id][0]
+        except Exception as exc:
+            raise ValueError(f"Unable to slice SHAP values for action {action_id}") from exc
 
     # -------------------------------------------------
     # Initialize SHAP Explainer
@@ -82,7 +129,7 @@ class PPOPolicySHAP:
         shap_values = self.explainer(obs)
 
         # Extract SHAP values for the selected action
-        action_shap = shap_values.values[0, :, action_id]
+        action_shap = self._select_action_shap_values(shap_values, action_id)
 
         explanation_df = pd.DataFrame({
             "Feature": self.observation_columns,
@@ -119,8 +166,9 @@ class PPOPolicySHAP:
     def plot_waterfall(self, shap_values, action_id):
         fig = plt.figure(figsize=(8, 4))
 
+        action_exp = self._select_action_explanation(shap_values, action_id)
         shap.plots.waterfall(
-            shap_values[0, :, action_id],
+            action_exp,
             max_display=10,
             show=False
         )

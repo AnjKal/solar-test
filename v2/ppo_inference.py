@@ -30,6 +30,7 @@ ACTION_MAP = {
     3: "Island Mode (Conservative)",
     4: "Island Mode (Aggressive)",
     5: "Safe Shutdown",
+    6: "Grid + Discharge (Export)",
 }
 
 logging.basicConfig(
@@ -63,7 +64,14 @@ def run_inference() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = ActorCritic(obs_dim, action_dim).to(device)
     state_dict = torch.load(MODEL_PATH, map_location=device)
-    model.load_state_dict(state_dict)
+    try:
+        model.load_state_dict(state_dict)
+    except RuntimeError as exc:
+        raise RuntimeError(
+            "Model weights are incompatible with the current environment action space. "
+            "If you recently changed MicrogridEnv.action_space (e.g., from 6 to 7 actions), "
+            "retrain the PPO model using train_ppo.py and then rerun inference."
+        ) from exc
     model.eval()
 
     action_ids = []
