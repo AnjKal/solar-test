@@ -40,13 +40,12 @@ class MicrogridEnv(gym.Env):
         """
         0: Grid-connected (idle)
         1: Grid + charge battery
-        2: Grid + discharge battery
-        3: Islanding (conservative discharge)
-        4: Islanding (aggressive discharge)
-        5: Safe shutdown
-        6: Grid-connected battery discharge with grid export
+        2: Islanding (conservative discharge)
+        3: Islanding (aggressive discharge)
+        4: Safe shutdown
+        5: Grid-connected battery discharge with grid export
         """
-        self.action_space = spaces.Discrete(7)
+        self.action_space = spaces.Discrete(6)
 
         # -------------------------
         # Observation Space
@@ -97,15 +96,15 @@ class MicrogridEnv(gym.Env):
         # Hard safety constraints
         if row["maintenance_active"] == 1:
             # Maintenance implies grid is down; only safe shutdown is allowed.
-            return action == 5
+            return action == 4
 
         # Normally: no islanding if grid is up.
         # Exception: if blackout risk is high, preemptive islanding is allowed.
-        if row["grid_status"] == 1 and action in [3, 4]:
+        if row["grid_status"] == 1 and action in [2, 3]:
             return float(row.get("blackout_probability", 0.0)) > 0.6
 
         # Export action requires grid availability.
-        if action == 6:
+        if action == 5:
             return row["grid_status"] == 1
 
         return True
@@ -123,7 +122,7 @@ class MicrogridEnv(gym.Env):
         # -------- SAFETY OVERRIDE --------
         if not self._is_action_allowed(action, row):
             reward -= 50.0
-            action = 5 if int(row["maintenance_active"]) == 1 else 0
+            action = 4 if int(row["maintenance_active"]) == 1 else 0
 
         # -------- BLACKOUT-RISK POLICY SHAPING --------
         # If blackout probability is high, the agent should proactively island.
@@ -135,9 +134,9 @@ class MicrogridEnv(gym.Env):
         high_risk = (bp > 0.6) and (int(row["maintenance_active"]) != 1)
         if high_risk:
             long_outage_threshold_min = 120.0
-            required_island_action = 3 if outage_min >= long_outage_threshold_min else 4
+            required_island_action = 2 if outage_min >= long_outage_threshold_min else 3
 
-            if action not in [3, 4]:
+            if action not in [2, 3]:
                 # Strong penalty for not islanding under high risk.
                 reward -= 10.0
             else:
@@ -150,7 +149,7 @@ class MicrogridEnv(gym.Env):
 
         # -------- BATTERY DYNAMICS (DYNAMIC SOC) --------
         # Charging: action 1
-        # Discharging: actions 2, 3, 4, 6
+        # Discharging: actions 2, 3, 5
         battery_capacity_kwh = float(row.get("battery_capacity_kwh", 20.0))
         battery_max_charge_kw = float(row.get("battery_max_charge_kw", 5.0))
         battery_max_discharge_kw = float(row.get("battery_max_discharge_kw", 5.0))
@@ -160,11 +159,11 @@ class MicrogridEnv(gym.Env):
 
         if action == 1:
             target_charge_kw = battery_max_charge_kw
-        elif action in [2, 6]:
+        elif action == 5:
             target_discharge_kw = battery_max_discharge_kw
-        elif action == 3:
+        elif action == 2:
             target_discharge_kw = min(2.5, battery_max_discharge_kw)
-        elif action == 4:
+        elif action == 3:
             target_discharge_kw = min(5.0, battery_max_discharge_kw)
 
         # SOC-constrained charge
@@ -207,18 +206,18 @@ class MicrogridEnv(gym.Env):
         battery_soc = self.battery_soc
 
         # -------- ACTION EFFECTS --------
-        is_islanded = action in [3, 4]
+        is_islanded = action in [2, 3]
 
-        # Action 6 is grid-connected export mode (not islanded)
-        is_export = action == 6
+        # Action 5 is grid-connected export mode (not islanded)
+        is_export = action == 5
 
         grid_available = (int(row["grid_status"]) == 1) and (int(row["maintenance_active"]) != 1)
-        effective_islanded = is_islanded or ((not grid_available) and action != 5)
+        effective_islanded = is_islanded or ((not grid_available) and action != 4)
 
         # If the grid is down and we're not explicitly islanding, penalize.
         # (The system will still operate islanded in practice, but we want the policy
         # to choose the appropriate island-mode actions.)
-        if (not grid_available) and int(row["maintenance_active"]) != 1 and (action not in [3, 4, 5]):
+        if (not grid_available) and int(row["maintenance_active"]) != 1 and (action not in [2, 3, 4]):
             reward -= 5.0
 
         available_power = 0.0
@@ -228,7 +227,7 @@ class MicrogridEnv(gym.Env):
         # -------- LOAD PRIORITIZATION --------
         served_p1 = served_p2 = served_p3 = 0.0
 
-        if action == 5:
+        if action == 4:
             # Safe shutdown
             served_p1 = served_p2 = served_p3 = 0.0
         elif effective_islanded:
@@ -244,8 +243,8 @@ class MicrogridEnv(gym.Env):
             # Grid-connected and grid available → serve all
             served_p1, served_p2, served_p3 = load_p1, load_p2, load_p3
 
-        # -------- GRID EXPORT REWARD (ACTION 6) --------
-        # When grid is available and action 6 is chosen, export any excess power
+        # -------- GRID EXPORT REWARD (ACTION 5) --------
+        # When grid is available and action 5 is chosen, export any excess power
         # after serving local loads. Local loads are always fully served in grid-connected mode.
         if is_export and row["grid_status"] == 1:
             total_load_kw = float(load_p1 + load_p2 + load_p3)
@@ -296,7 +295,7 @@ class MicrogridEnv(gym.Env):
         if row["grid_status"] == 1 and low_forecast:
             if action == 1:
                 reward += 0.5
-            elif action in [2, 4]:
+            elif action in [3, 5]:
                 reward -= 0.5
 
         # Maintenance SOC readiness incentives

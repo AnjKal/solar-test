@@ -55,10 +55,10 @@ scheduler = BlockingScheduler()
 scheduler.add_job(
     run_microgrid_pipeline,
     trigger="interval",
-    minutes=5,
+    minutes=2,
     max_instances=1,        # prevent overlapping runs
     coalesce=True           # merge missed runs
 )
 
-logging.info("Microgrid scheduler running (every 5 minutes)")
+logging.info("Microgrid scheduler running (every 2 minutes)")
 scheduler.start()

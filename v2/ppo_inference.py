@@ -26,12 +26,27 @@ LOG_PATH = BASE_DIR / "ppo_inference.log"
 ACTION_MAP = {
     0: "Grid-connected (Idle)",
     1: "Grid + Charge Battery",
-    2: "Grid + Discharge Battery",
-    3: "Island Mode (Conservative)",
-    4: "Island Mode (Aggressive)",
-    5: "Safe Shutdown",
-    6: "Grid + Discharge (Export)",
+    2: "Island Mode (Conservative)",
+    3: "Island Mode (Aggressive)",
+    4: "Safe Shutdown",
+    5: "Grid + Discharge (Export)",
 }
+
+
+def _override_action(env: MicrogridEnv, row: pd.Series, proposed_action: int) -> int:
+    """Apply environment safety constraints so logged decisions match actual allowed behavior."""
+
+    # Maintenance must force shutdown.
+    if pd.notna(row.get("maintenance_active", 0)) and int(row.get("maintenance_active", 0)) == 1:
+        return 4
+
+    # If grid is down, pick an explicit islanding action (to avoid confusing labels like "Grid-connected").
+    if pd.notna(row.get("grid_status", 1)) and int(row.get("grid_status", 1)) == 0:
+        outage_min = float(row.get("expected_outage_duration_min", 0.0))
+        return 2 if outage_min >= 120.0 else 3
+
+    # Otherwise, use the proposed action if allowed, else fall back to idle.
+    return proposed_action if env._is_action_allowed(proposed_action, row) else 0
 
 logging.basicConfig(
     filename=str(LOG_PATH),
@@ -69,7 +84,7 @@ def run_inference() -> None:
     except RuntimeError as exc:
         raise RuntimeError(
             "Model weights are incompatible with the current environment action space. "
-            "If you recently changed MicrogridEnv.action_space (e.g., from 6 to 7 actions), "
+            "If you recently changed MicrogridEnv.action_space, "
             "retrain the PPO model using train_ppo.py and then rerun inference."
         ) from exc
     model.eval()
@@ -81,7 +96,7 @@ def run_inference() -> None:
     for idx, row in forecast_df.iterrows():
         maintenance_flag = row["maintenance_active"]
         if pd.notna(maintenance_flag) and int(maintenance_flag) == 1:
-            action = 5
+            action = 4
             action_ids.append(action)
             action_labels.append(ACTION_MAP[action])
             state_values.append(np.nan)
@@ -98,6 +113,8 @@ def run_inference() -> None:
             logits, value = model(obs_tensor)
             dist = Categorical(logits=logits)
             action = torch.argmax(dist.probs).item()
+
+        action = _override_action(env, row, int(action))
 
         action_ids.append(action)
         action_labels.append(ACTION_MAP[action])

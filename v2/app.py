@@ -20,11 +20,10 @@ DECISIONS_PATH = BASE_DIR / "ppo_decisions.csv"
 ACTION_MAP = {
     0: "Grid-connected (Idle)",
     1: "Grid + Charge Battery",
-    2: "Grid + Discharge Battery",
-    3: "Island Mode (Conservative)",
-    4: "Island Mode (Aggressive)",
-    5: "Safe Shutdown",
-    6: "Grid + Discharge (Export)",
+    2: "Island Mode (Conservative)",
+    3: "Island Mode (Aggressive)",
+    4: "Safe Shutdown",
+    5: "Grid + Discharge (Export)",
 }
 
 st.set_page_config(
@@ -107,26 +106,62 @@ if missing:
 # --------------------------------------------------
 st.subheader("🤖 PPO Decisions")
 
-action_ids = []
-action_labels = []
-state_values = []
+# By default, display the decisions exactly as written by ppo_inference.py.
+# Recompute only when explicitly requested.
+recompute_actions = st.sidebar.checkbox(
+    "Recompute actions from model (overrides CSV)",
+    value=False,
+    help=(
+        "If enabled, action_id/action_label/state_value will be recomputed from the "
+        "current model weights instead of using the values already stored in ppo_decisions.csv."
+    ),
+)
 
-for _, row in df.iterrows():
-    obs = row[obs_columns].values.astype(np.float32)
-    obs_tensor = torch.tensor(obs).to(device)
+if recompute_actions or ("action_id" not in df.columns) or ("action_label" not in df.columns):
+    action_ids = []
+    action_labels = []
+    state_values = []
 
-    with torch.no_grad():
-        logits, value = model(obs_tensor)
-        dist = Categorical(logits=logits)
-        action = torch.argmax(dist.probs).item()
+    for _, row in df.iterrows():
+        maintenance_active = row.get("maintenance_active", 0)
+        if pd.notna(maintenance_active) and int(maintenance_active) == 1:
+            action = 4
+            action_ids.append(action)
+            action_labels.append(ACTION_MAP[action])
+            state_values.append(np.nan)
+            continue
 
-    action_ids.append(action)
-    action_labels.append(ACTION_MAP[action])
-    state_values.append(round(value.item(), 3))
+        if pd.notna(row.get("grid_status", 1)) and int(row.get("grid_status", 1)) == 0:
+            outage_min = float(row.get("expected_outage_duration_min", 0.0))
+            action = 2 if outage_min >= 120.0 else 3
+            action_ids.append(action)
+            action_labels.append(ACTION_MAP[action])
+            state_values.append(np.nan)
+            continue
 
-df["action_id"] = action_ids
-df["action_label"] = action_labels
-df["state_value"] = state_values
+        obs = row[obs_columns].values.astype(np.float32)
+        obs_tensor = torch.tensor(obs).to(device)
+
+        with torch.no_grad():
+            logits, value = model(obs_tensor)
+            dist = Categorical(logits=logits)
+            action = torch.argmax(dist.probs).item()
+
+        # Apply the same safety semantics used by inference/env.
+        if not env._is_action_allowed(int(action), row):
+            action = 0
+
+        action_ids.append(action)
+        action_labels.append(ACTION_MAP[action])
+        state_values.append(round(value.item(), 3))
+
+    df["action_id"] = action_ids
+    df["action_label"] = action_labels
+    df["state_value"] = state_values
+else:
+    # Ensure action_label exists even if only action_id is present
+    if "action_id" in df.columns and "action_label" not in df.columns:
+        df["action_label"] = df["action_id"].map(ACTION_MAP)
 
 summary_columns = [
     "action_id",
