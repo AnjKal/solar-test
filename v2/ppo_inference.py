@@ -40,6 +40,11 @@ def _override_action(env: MicrogridEnv, row: pd.Series, proposed_action: int) ->
     if pd.notna(row.get("maintenance_active", 0)) and int(row.get("maintenance_active", 0)) == 1:
         return 4
 
+    # If blackout probability is high, enforce islanding (mode depends on outage duration).
+    if float(row.get("blackout_probability", 0.0)) > 0.6:
+        outage_min = float(row.get("expected_outage_duration_min", 0.0))
+        return 2 if outage_min >= 120.0 else 3
+
     # If grid is down, pick an explicit islanding action (to avoid confusing labels like "Grid-connected").
     if pd.notna(row.get("grid_status", 1)) and int(row.get("grid_status", 1)) == 0:
         outage_min = float(row.get("expected_outage_duration_min", 0.0))
@@ -92,11 +97,22 @@ def run_inference() -> None:
     action_ids = []
     action_labels = []
     state_values = []
+    internal_battery_socs = []
 
-    for idx, row in forecast_df.iterrows():
-        maintenance_flag = row["maintenance_active"]
+    # Important: step the environment forward so internal battery SOC evolves and is
+    # used in subsequent observations (instead of relying on the CSV's static SOC).
+    obs = env.reset()
+
+    for idx in range(len(forecast_df)):
+        row = forecast_df.iloc[idx]
+
+        # SOC used by the policy at this timestep (internal env state, not the CSV value).
+        internal_battery_socs.append(float(env.battery_soc))
+
+        maintenance_flag = row.get("maintenance_active", 0)
         if pd.notna(maintenance_flag) and int(maintenance_flag) == 1:
-            action = 4
+            proposed_action = 4
+            action = _override_action(env, row, proposed_action)
             action_ids.append(action)
             action_labels.append(ACTION_MAP[action])
             state_values.append(np.nan)
@@ -104,23 +120,38 @@ def run_inference() -> None:
                 "Maintenance override at row %s; forcing Safe Shutdown without model inference",
                 idx,
             )
+            obs, reward, done, info = env.step(action)
+            if done:
+                break
             continue
 
-        obs = row[obs_columns].values.astype(np.float32)
-        obs_tensor = torch.tensor(obs).to(device)
+        obs_tensor = torch.tensor(obs, dtype=torch.float32).to(device)
+        action_mask = env.get_action_mask()
+        mask_t = torch.tensor(action_mask, dtype=torch.bool).to(device)
 
         with torch.no_grad():
             logits, value = model(obs_tensor)
+            logits = logits.masked_fill(~mask_t, -1e9)
             dist = Categorical(logits=logits)
-            action = torch.argmax(dist.probs).item()
+            proposed_action = int(torch.argmax(dist.probs).item())
 
-        action = _override_action(env, row, int(action))
-
+        action = _override_action(env, row, proposed_action)
         action_ids.append(action)
         action_labels.append(ACTION_MAP[action])
         state_values.append(round(value.item(), 3))
 
-    results_df = forecast_df.copy()
+        obs, reward, done, info = env.step(action)
+        if done:
+            break
+
+    results_df = forecast_df.iloc[: len(action_ids)].copy()
+
+    # Preserve the dataset SOC for debugging/traceability, but make battery_soc reflect
+    # the internal SOC trajectory actually used during inference.
+    if "battery_soc" in results_df.columns:
+        results_df["battery_soc_dataset"] = results_df["battery_soc"]
+    results_df["battery_soc"] = internal_battery_socs[: len(action_ids)]
+
     results_df["action_id"] = action_ids
     results_df["action_label"] = action_labels
     results_df["state_value"] = state_values

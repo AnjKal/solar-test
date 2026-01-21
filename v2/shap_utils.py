@@ -4,8 +4,6 @@ import pandas as pd
 import shap
 import matplotlib.pyplot as plt
 
-from torch.distributions import Categorical
-
 
 class PPOPolicySHAP:
     """
@@ -42,11 +40,33 @@ class PPOPolicySHAP:
         """
         if isinstance(x, np.ndarray) and x.ndim == 1:
             x = x.reshape(1, -1)
+
         x_tensor = torch.tensor(x, dtype=torch.float32).to(self.device)
+        if x_tensor.ndim == 1:
+            x_tensor = x_tensor.unsqueeze(0)
 
         with torch.no_grad():
             logits, _ = self.model(x_tensor)
-            probs = torch.softmax(logits, dim=1)
+
+            # Ensure logits are (batch, action_dim)
+            if logits.ndim == 1:
+                logits = logits.unsqueeze(0)
+
+            # Mirror environment masking rule: when solar_actual_kw == 0, action 1 (charge)
+            # must not be selectable.
+            try:
+                solar_idx = self.observation_columns.index("solar_actual_kw")
+            except ValueError:
+                solar_idx = None
+
+            if solar_idx is not None and logits.shape[1] > 1:
+                solar_kw = x_tensor[:, solar_idx]
+                zero_solar = solar_kw <= 0.0
+                if bool(torch.any(zero_solar)):
+                    logits = logits.clone()
+                    logits[zero_solar, 1] = -1e9
+
+            probs = torch.softmax(logits, dim=-1)
 
         return probs.cpu().numpy()
 
@@ -123,6 +143,9 @@ class PPOPolicySHAP:
         obs_row: pandas Series (single row)
         action_id: int (chosen PPO action)
         """
+        if self.explainer is None:
+            raise RuntimeError("SHAP explainer is not initialized. Call initialize(background_df) first.")
+
         obs = obs_row[self.observation_columns].values.astype(np.float32)
         obs = obs.reshape(1, -1)
 

@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import streamlit as st
+import streamlit.components.v1 as components
 import torch
 import pandas as pd
 import numpy as np
@@ -29,6 +30,14 @@ ACTION_MAP = {
 st.set_page_config(
     page_title="PPO Microgrid Decisions + Explainability",
     layout="wide"
+)
+
+# Auto-refresh so the UI reflects the scheduler's every-2-minute updates.
+# Uses a client-side meta refresh (no extra dependencies).
+AUTO_REFRESH_SECONDS = 120
+components.html(
+    f"""<meta http-equiv="refresh" content="{AUTO_REFRESH_SECONDS}">""",
+    height=0,
 )
 
 # --------------------------------------------------
@@ -168,6 +177,14 @@ summary_columns = [
     "action_label",
     "state_value",
 ] + obs_columns
+
+# If inference preserved the original dataset SOC, include it for transparency.
+if "battery_soc_dataset" in df.columns and "battery_soc_dataset" not in summary_columns:
+    try:
+        insert_at = summary_columns.index("battery_soc") + 1
+        summary_columns.insert(insert_at, "battery_soc_dataset")
+    except ValueError:
+        summary_columns.append("battery_soc_dataset")
 
 st.dataframe(df[summary_columns], use_container_width=True)
 

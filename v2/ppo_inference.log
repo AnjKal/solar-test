@@ -126,3 +126,473 @@
 2026-01-16 19:35:50,548 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
 2026-01-16 19:35:50,549 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
 2026-01-16 19:35:50,594 - INFO - PPO inference completed successfully
+2026-01-16 19:45:13,373 - INFO - PPO inference run started
+2026-01-16 19:45:13,468 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-16 19:45:13,469 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-16 19:45:13,500 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-16 19:45:13,501 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-16 19:45:13,553 - INFO - PPO inference completed successfully
+2026-01-16 19:47:12,338 - INFO - PPO inference run started
+2026-01-16 19:47:12,427 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-16 19:47:12,428 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-16 19:47:12,458 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-16 19:47:12,459 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-16 19:47:12,521 - INFO - PPO inference completed successfully
+2026-01-16 19:49:08,140 - INFO - PPO inference run started
+2026-01-16 19:49:08,222 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-16 19:49:08,223 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-16 19:49:08,254 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-16 19:49:08,254 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-16 19:49:08,306 - INFO - PPO inference completed successfully
+2026-01-17 12:01:01,232 - INFO - PPO inference run started
+2026-01-17 12:18:13,432 - INFO - PPO inference run started
+2026-01-17 12:18:13,451 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:18:13,451 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:18:13,458 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:18:13,458 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:18:13,467 - INFO - PPO inference completed successfully
+2026-01-17 12:20:13,461 - INFO - PPO inference run started
+2026-01-17 12:20:13,474 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:20:13,474 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:20:13,479 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:20:13,479 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:20:13,488 - INFO - PPO inference completed successfully
+2026-01-17 12:22:13,226 - INFO - PPO inference run started
+2026-01-17 12:22:13,238 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:22:13,238 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:22:13,242 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:22:13,242 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:22:13,253 - INFO - PPO inference completed successfully
+2026-01-17 12:24:15,407 - INFO - PPO inference run started
+2026-01-17 12:24:15,440 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:24:15,441 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:24:15,457 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:24:15,457 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:24:15,480 - INFO - PPO inference completed successfully
+2026-01-17 12:26:13,318 - INFO - PPO inference run started
+2026-01-17 12:26:13,330 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:26:13,331 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:26:13,338 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:26:13,338 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:26:13,346 - INFO - PPO inference completed successfully
+2026-01-17 12:28:13,348 - INFO - PPO inference run started
+2026-01-17 12:28:13,361 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:28:13,361 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:28:13,365 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:28:13,365 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:28:13,373 - INFO - PPO inference completed successfully
+2026-01-17 12:30:13,557 - INFO - PPO inference run started
+2026-01-17 12:30:13,574 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 12:30:13,575 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 12:30:13,578 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 12:30:13,578 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 12:30:13,585 - INFO - PPO inference completed successfully
+2026-01-17 14:13:15,404 - INFO - PPO inference run started
+2026-01-17 14:13:15,512 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:13:15,516 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:13:15,542 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:13:15,544 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:13:15,585 - INFO - PPO inference completed successfully
+2026-01-17 14:15:09,345 - INFO - PPO inference run started
+2026-01-17 14:15:09,366 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:15:09,366 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:15:09,370 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:15:09,371 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:15:09,381 - INFO - PPO inference completed successfully
+2026-01-17 14:17:09,192 - INFO - PPO inference run started
+2026-01-17 14:17:09,208 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:17:09,209 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:17:09,214 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:17:09,215 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:17:09,223 - INFO - PPO inference completed successfully
+2026-01-17 14:19:08,925 - INFO - PPO inference run started
+2026-01-17 14:19:08,941 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:19:08,941 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:19:08,945 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:19:08,945 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:19:08,951 - INFO - PPO inference completed successfully
+2026-01-17 14:21:08,760 - INFO - PPO inference run started
+2026-01-17 14:21:08,775 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:21:08,775 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:21:08,783 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:21:08,783 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:21:08,793 - INFO - PPO inference completed successfully
+2026-01-17 14:23:12,469 - INFO - PPO inference run started
+2026-01-17 14:23:12,509 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:23:12,510 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:23:12,527 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:23:12,528 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:23:12,546 - INFO - PPO inference completed successfully
+2026-01-17 14:25:08,938 - INFO - PPO inference run started
+2026-01-17 14:25:08,954 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:25:08,954 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:25:08,962 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:25:08,977 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:25:08,984 - INFO - PPO inference completed successfully
+2026-01-17 14:27:08,833 - INFO - PPO inference run started
+2026-01-17 14:27:08,846 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:27:08,846 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:27:08,849 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:27:08,850 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:27:08,864 - INFO - PPO inference completed successfully
+2026-01-17 14:29:12,466 - INFO - PPO inference run started
+2026-01-17 14:29:12,509 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:29:12,510 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:29:12,522 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:29:12,523 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:29:12,543 - INFO - PPO inference completed successfully
+2026-01-17 14:31:12,403 - INFO - PPO inference run started
+2026-01-17 14:31:12,448 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:31:12,449 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:31:12,459 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:31:12,460 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:31:12,480 - INFO - PPO inference completed successfully
+2026-01-17 14:33:12,475 - INFO - PPO inference run started
+2026-01-17 14:33:12,520 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:33:12,521 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:33:12,533 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:33:12,534 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:33:12,552 - INFO - PPO inference completed successfully
+2026-01-17 14:35:12,585 - INFO - PPO inference run started
+2026-01-17 14:35:12,630 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 14:35:12,631 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 14:35:12,643 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 14:35:12,643 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 14:35:12,665 - INFO - PPO inference completed successfully
+2026-01-17 15:23:33,101 - INFO - PPO inference run started
+2026-01-17 15:23:33,119 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:23:33,120 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:23:33,126 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:23:33,127 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:23:33,138 - INFO - PPO inference completed successfully
+2026-01-17 15:25:33,179 - INFO - PPO inference run started
+2026-01-17 15:25:33,195 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:25:33,196 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:25:33,203 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:25:33,203 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:25:33,210 - INFO - PPO inference completed successfully
+2026-01-17 15:27:33,000 - INFO - PPO inference run started
+2026-01-17 15:27:33,016 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:27:33,017 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:27:33,024 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:27:33,024 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:27:33,040 - INFO - PPO inference completed successfully
+2026-01-17 15:29:41,111 - INFO - PPO inference run started
+2026-01-17 15:29:41,126 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:29:41,126 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:29:41,132 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:29:41,132 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:29:41,139 - INFO - PPO inference completed successfully
+2026-01-17 15:31:43,606 - INFO - PPO inference run started
+2026-01-17 15:31:43,672 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:31:43,674 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:31:43,702 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:31:43,704 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:31:43,760 - INFO - PPO inference completed successfully
+2026-01-17 15:42:41,934 - INFO - PPO inference run started
+2026-01-17 15:42:41,949 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:42:41,950 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:42:41,956 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:42:41,957 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:42:41,967 - INFO - PPO inference completed successfully
+2026-01-17 15:44:42,501 - INFO - PPO inference run started
+2026-01-17 15:44:42,514 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:44:42,514 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:44:42,519 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:44:42,520 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:44:42,529 - INFO - PPO inference completed successfully
+2026-01-17 15:46:47,667 - INFO - PPO inference run started
+2026-01-17 15:46:47,733 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:46:47,735 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:46:47,765 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:46:47,767 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:46:47,819 - INFO - PPO inference completed successfully
+2026-01-17 15:48:42,502 - INFO - PPO inference run started
+2026-01-17 15:48:42,518 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:48:42,520 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:48:42,524 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:48:42,524 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:48:42,531 - INFO - PPO inference completed successfully
+2026-01-17 15:50:42,204 - INFO - PPO inference run started
+2026-01-17 15:50:42,269 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:50:42,271 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:50:42,298 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:50:42,300 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:50:42,333 - INFO - PPO inference completed successfully
+2026-01-17 15:52:48,440 - INFO - PPO inference run started
+2026-01-17 15:52:48,529 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:52:48,531 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:52:48,560 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:52:48,561 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:52:48,609 - INFO - PPO inference completed successfully
+2026-01-17 15:54:41,768 - INFO - PPO inference run started
+2026-01-17 15:54:41,780 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-17 15:54:41,781 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-17 15:54:41,784 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-17 15:54:41,784 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-17 15:54:41,799 - INFO - PPO inference completed successfully
+2026-01-19 20:10:35,831 - INFO - PPO inference run started
+2026-01-19 20:10:35,868 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:10:35,869 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:10:35,876 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:10:35,876 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:10:35,889 - INFO - PPO inference completed successfully
+2026-01-19 20:12:40,900 - INFO - PPO inference run started
+2026-01-19 20:12:40,962 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:12:40,964 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:12:40,990 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:12:40,992 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:12:41,028 - INFO - PPO inference completed successfully
+2026-01-19 20:14:35,817 - INFO - PPO inference run started
+2026-01-19 20:14:35,829 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:14:35,829 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:14:35,833 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:14:35,834 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:14:35,841 - INFO - PPO inference completed successfully
+2026-01-19 20:16:35,533 - INFO - PPO inference run started
+2026-01-19 20:16:35,549 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:16:35,550 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:16:35,555 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:16:35,555 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:16:35,563 - INFO - PPO inference completed successfully
+2026-01-19 20:42:48,807 - INFO - PPO inference run started
+2026-01-19 20:42:48,843 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:42:48,844 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:42:48,854 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:42:48,855 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:42:48,875 - INFO - PPO inference completed successfully
+2026-01-19 20:44:49,030 - INFO - PPO inference run started
+2026-01-19 20:44:49,065 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:44:49,066 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:44:49,076 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:44:49,077 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:44:49,094 - INFO - PPO inference completed successfully
+2026-01-19 20:46:49,567 - INFO - PPO inference run started
+2026-01-19 20:46:49,586 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 20:46:49,586 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 20:46:49,592 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 20:46:49,593 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 20:46:49,601 - INFO - PPO inference completed successfully
+2026-01-19 21:06:41,745 - INFO - PPO inference run started
+2026-01-19 21:06:41,779 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 21:06:41,779 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 21:06:41,791 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 21:06:41,792 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 21:06:41,811 - INFO - PPO inference completed successfully
+2026-01-19 21:59:48,165 - INFO - PPO inference run started
+2026-01-19 21:59:48,219 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-19 21:59:48,220 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-19 21:59:48,229 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-19 21:59:48,230 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-19 21:59:48,248 - INFO - PPO inference completed successfully
+2026-01-20 09:55:42,205 - INFO - PPO inference run started
+2026-01-20 09:55:42,329 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 09:55:42,330 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 09:55:42,340 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 09:55:42,341 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 09:55:42,364 - INFO - PPO inference completed successfully
+2026-01-20 09:57:36,660 - INFO - PPO inference run started
+2026-01-20 09:57:36,672 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 09:57:36,672 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 09:57:36,675 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 09:57:36,676 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 09:57:36,685 - INFO - PPO inference completed successfully
+2026-01-20 09:59:36,918 - INFO - PPO inference run started
+2026-01-20 09:59:36,932 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 09:59:36,932 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 09:59:36,939 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 09:59:36,939 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 09:59:36,952 - INFO - PPO inference completed successfully
+2026-01-20 10:01:39,305 - INFO - PPO inference run started
+2026-01-20 10:01:39,324 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:01:39,324 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:01:39,327 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:01:39,328 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:01:39,337 - INFO - PPO inference completed successfully
+2026-01-20 10:03:36,995 - INFO - PPO inference run started
+2026-01-20 10:03:37,008 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:03:37,008 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:03:37,011 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:03:37,011 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:03:37,024 - INFO - PPO inference completed successfully
+2026-01-20 10:05:41,673 - INFO - PPO inference run started
+2026-01-20 10:05:41,748 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:05:41,750 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:05:41,777 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:05:41,778 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:05:41,819 - INFO - PPO inference completed successfully
+2026-01-20 10:07:37,022 - INFO - PPO inference run started
+2026-01-20 10:07:37,039 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:07:37,040 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:07:37,043 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:07:37,044 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:07:37,052 - INFO - PPO inference completed successfully
+2026-01-20 10:09:36,589 - INFO - PPO inference run started
+2026-01-20 10:09:36,601 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:09:36,601 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:09:36,604 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:09:36,604 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:09:36,616 - INFO - PPO inference completed successfully
+2026-01-20 10:11:36,585 - INFO - PPO inference run started
+2026-01-20 10:11:36,604 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:11:36,615 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:11:36,618 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:11:36,619 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:11:36,626 - INFO - PPO inference completed successfully
+2026-01-20 10:13:41,658 - INFO - PPO inference run started
+2026-01-20 10:13:41,731 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 10:13:41,733 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 10:13:41,757 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 10:13:41,758 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 10:13:41,796 - INFO - PPO inference completed successfully
+2026-01-20 16:45:13,425 - INFO - PPO inference run started
+2026-01-20 16:45:13,553 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:45:13,555 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:45:13,630 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:45:13,631 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:45:13,690 - INFO - PPO inference completed successfully
+2026-01-20 16:47:13,585 - INFO - PPO inference run started
+2026-01-20 16:47:13,657 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:47:13,659 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:47:13,719 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:47:13,721 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:47:13,763 - INFO - PPO inference completed successfully
+2026-01-20 16:49:11,851 - INFO - PPO inference run started
+2026-01-20 16:49:11,889 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:49:11,890 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:49:11,899 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:49:11,900 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:49:11,923 - INFO - PPO inference completed successfully
+2026-01-20 16:51:10,872 - INFO - PPO inference run started
+2026-01-20 16:51:10,915 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:51:10,916 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:51:10,940 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:51:10,941 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:51:10,976 - INFO - PPO inference completed successfully
+2026-01-20 16:53:12,748 - INFO - PPO inference run started
+2026-01-20 16:53:12,813 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:53:12,815 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:53:12,838 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:53:12,840 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:53:12,873 - INFO - PPO inference completed successfully
+2026-01-20 16:55:08,287 - INFO - PPO inference run started
+2026-01-20 16:55:08,311 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:55:08,311 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:55:08,319 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:55:08,319 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:55:08,334 - INFO - PPO inference completed successfully
+2026-01-20 16:57:05,669 - INFO - PPO inference run started
+2026-01-20 16:57:05,682 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:57:05,682 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:57:05,685 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:57:05,685 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:57:05,699 - INFO - PPO inference completed successfully
+2026-01-20 16:59:08,053 - INFO - PPO inference run started
+2026-01-20 16:59:08,076 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 16:59:08,077 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 16:59:08,102 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 16:59:08,103 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 16:59:08,133 - INFO - PPO inference completed successfully
+2026-01-20 17:01:05,792 - INFO - PPO inference run started
+2026-01-20 17:01:05,833 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 17:01:05,834 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 17:01:05,842 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 17:01:05,842 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 17:01:05,849 - INFO - PPO inference completed successfully
+2026-01-20 17:15:18,121 - INFO - PPO inference run started
+2026-01-20 17:15:18,215 - INFO - Maintenance override at row 3; forcing Safe Shutdown without model inference
+2026-01-20 17:15:18,215 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 17:15:18,225 - INFO - Maintenance override at row 13; forcing Safe Shutdown without model inference
+2026-01-20 17:15:18,225 - INFO - Maintenance override at row 14; forcing Safe Shutdown without model inference
+2026-01-20 17:15:18,245 - INFO - PPO inference completed successfully
+2026-01-20 18:16:40,822 - INFO - PPO inference run started
+2026-01-20 18:16:40,911 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:16:40,919 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:16:40,931 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:16:40,945 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:16:40,959 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:16:40,978 - INFO - PPO inference completed successfully
+2026-01-20 18:18:51,412 - INFO - PPO inference run started
+2026-01-20 18:18:51,509 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:18:51,517 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:18:51,534 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:18:51,563 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:18:51,578 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:18:51,608 - INFO - PPO inference completed successfully
+2026-01-20 18:20:49,523 - INFO - PPO inference run started
+2026-01-20 18:20:49,549 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:20:49,552 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:20:49,558 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:20:49,563 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:20:49,566 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:20:49,577 - INFO - PPO inference completed successfully
+2026-01-20 18:22:38,372 - INFO - PPO inference run started
+2026-01-20 18:22:38,397 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:22:38,399 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:22:38,401 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:22:38,403 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:22:38,404 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:22:38,413 - INFO - PPO inference completed successfully
+2026-01-20 18:24:48,814 - INFO - PPO inference run started
+2026-01-20 18:24:48,897 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:24:48,903 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:24:48,916 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:24:48,936 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:24:48,949 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:24:48,967 - INFO - PPO inference completed successfully
+2026-01-20 18:26:50,182 - INFO - PPO inference run started
+2026-01-20 18:26:50,286 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:26:50,300 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:26:50,318 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:26:50,348 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:26:50,366 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:26:50,395 - INFO - PPO inference completed successfully
+2026-01-20 18:28:48,805 - INFO - PPO inference run started
+2026-01-20 18:28:48,918 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:28:48,931 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:28:48,950 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:28:48,977 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:28:49,000 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:28:49,029 - INFO - PPO inference completed successfully
+2026-01-20 18:30:48,374 - INFO - PPO inference run started
+2026-01-20 18:30:48,483 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:30:48,492 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:30:48,508 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:30:48,540 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:30:48,555 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:30:48,586 - INFO - PPO inference completed successfully
+2026-01-20 18:32:48,499 - INFO - PPO inference run started
+2026-01-20 18:32:48,627 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:32:48,646 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:32:48,663 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:32:48,693 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:32:48,709 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:32:48,737 - INFO - PPO inference completed successfully
+2026-01-20 18:34:49,364 - INFO - PPO inference run started
+2026-01-20 18:34:49,467 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:34:49,479 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:34:49,495 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:34:49,528 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:34:49,544 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:34:49,576 - INFO - PPO inference completed successfully
+2026-01-20 18:36:49,004 - INFO - PPO inference run started
+2026-01-20 18:36:49,111 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:36:49,124 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:36:49,142 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:36:49,173 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:36:49,189 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:36:49,220 - INFO - PPO inference completed successfully
+2026-01-20 18:38:48,715 - INFO - PPO inference run started
+2026-01-20 18:38:48,814 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:38:48,827 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:38:48,843 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:38:48,869 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:38:48,884 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:38:48,915 - INFO - PPO inference completed successfully
+2026-01-20 18:40:49,111 - INFO - PPO inference run started
+2026-01-20 18:40:49,179 - INFO - Maintenance override at row 4; forcing Safe Shutdown without model inference
+2026-01-20 18:40:49,192 - INFO - Maintenance override at row 7; forcing Safe Shutdown without model inference
+2026-01-20 18:40:49,208 - INFO - Maintenance override at row 11; forcing Safe Shutdown without model inference
+2026-01-20 18:40:49,231 - INFO - Maintenance override at row 17; forcing Safe Shutdown without model inference
+2026-01-20 18:40:49,247 - INFO - Maintenance override at row 21; forcing Safe Shutdown without model inference
+2026-01-20 18:40:49,277 - INFO - PPO inference completed successfully

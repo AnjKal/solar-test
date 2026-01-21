@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 def generate_synthetic_microgrid_dataset(
     start_date: str = "2024-01-01",
-    days: int = 365,
+    days: int = 365 * 3,
     seed: int = 42,
     save_path: str = "synthetic_microgrid_dataset.csv",
     *,
@@ -187,7 +187,7 @@ def generate_synthetic_microgrid_dataset(
 # Backward-compatible name (older docs referenced this symbol)
 def generate_stress_training_dataset(
     start_date="2024-01-01",
-    days=365,
+    days=365 * 3,
     seed=42,
     save_path="synthetic_microgrid_dataset.csv",
 ):

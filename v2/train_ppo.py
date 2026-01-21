@@ -24,7 +24,8 @@ buffer = {
     "log_probs": [],
     "rewards": [],
     "dones": [],
-    "values": []
+    "values": [],
+    "action_masks": [],
 }
 
 step = 0
@@ -33,7 +34,8 @@ while step < TIMESTEPS:
     buffer = {k: [] for k in buffer}
     
     for _ in range(ROLLOUT_LENGTH):
-        action, log_prob, value = agent.select_action(obs)
+        action_mask = env.get_action_mask()
+        action, log_prob, value = agent.select_action(obs, action_mask=action_mask)
         next_obs, reward, done, _ = env.step(action)
 
         buffer["obs"].append(obs)
@@ -42,6 +44,7 @@ while step < TIMESTEPS:
         buffer["rewards"].append(reward)
         buffer["dones"].append(done)
         buffer["values"].append(value.item())
+        buffer["action_masks"].append(action_mask)
 
         obs = next_obs
         step += 1
@@ -64,15 +67,23 @@ while step < TIMESTEPS:
 
     returns = np.array(advantages) + np.array(buffer["values"])
 
-    agent.update(
+    metrics = agent.update(
         buffer["obs"],
         buffer["actions"],
         buffer["log_probs"],
         returns,
-        advantages
+        advantages,
+        action_masks=buffer["action_masks"],
     )
 
-    print(f"Training step: {step}")
+    rewards_total = float(np.sum(buffer["rewards"]))
+    print(
+        "Training step: "
+        f"{step} | rewards_total={rewards_total:.3f} | "
+        f"kl_div={metrics['kl_div']:.6f} | policy_entropy={metrics['policy_entropy']:.6f} | "
+        f"policy_loss={metrics['policy_loss']:.6f} | value_loss={metrics['value_loss']:.6f} | "
+        f"entropy_loss={metrics['entropy_loss']:.6f}"
+    )
 torch.save(
     agent.model.state_dict(),
     os.path.join(MODEL_DIR, "ppo_microgrid_final.pth")

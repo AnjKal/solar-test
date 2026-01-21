@@ -146,3 +146,537 @@
 2026-01-16 19:35:51,623 - INFO - PPO inference completed
 2026-01-16 19:35:51,623 - INFO - Pipeline finished successfully
 2026-01-16 19:35:51,623 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:37:36 IST)" executed successfully
+2026-01-16 19:43:03,896 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-16 19:43:03,896 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-16 19:43:03,898 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-16 19:43:03,898 - INFO - Scheduler started
+2026-01-16 19:45:03,913 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:45:03 IST)" (scheduled at 2026-01-16 19:45:03.896270+05:30)
+2026-01-16 19:45:03,914 - INFO - Pipeline started
+2026-01-16 19:45:05,782 - INFO - Forecast generation completed
+2026-01-16 19:45:14,619 - INFO - PPO inference completed
+2026-01-16 19:45:14,619 - INFO - Pipeline finished successfully
+2026-01-16 19:45:14,619 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:47:03 IST)" executed successfully
+2026-01-16 19:47:03,909 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:49:03 IST)" (scheduled at 2026-01-16 19:47:03.896270+05:30)
+2026-01-16 19:47:03,910 - INFO - Pipeline started
+2026-01-16 19:47:05,697 - INFO - Forecast generation completed
+2026-01-16 19:47:13,766 - INFO - PPO inference completed
+2026-01-16 19:47:13,767 - INFO - Pipeline finished successfully
+2026-01-16 19:47:13,767 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:49:03 IST)" executed successfully
+2026-01-16 19:49:03,900 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:51:03 IST)" (scheduled at 2026-01-16 19:49:03.896270+05:30)
+2026-01-16 19:49:03,900 - INFO - Pipeline started
+2026-01-16 19:49:04,773 - INFO - Forecast generation completed
+2026-01-16 19:49:09,517 - INFO - PPO inference completed
+2026-01-16 19:49:09,517 - INFO - Pipeline finished successfully
+2026-01-16 19:49:09,517 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-16 19:51:03 IST)" executed successfully
+2026-01-17 11:39:48,060 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 11:39:48,062 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 11:39:48,063 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 11:39:48,064 - INFO - Scheduler started
+2026-01-17 11:58:58,730 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 11:58:58,730 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 11:58:58,731 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 11:58:58,731 - INFO - Scheduler started
+2026-01-17 12:00:58,734 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:00:58 IST)" (scheduled at 2026-01-17 12:00:58.730403+05:30)
+2026-01-17 12:00:58,734 - INFO - Pipeline started
+2026-01-17 12:00:59,363 - INFO - Forecast generation completed
+2026-01-17 12:01:01,606 - ERROR - Pipeline failed: Command '['C:\\Users\\Suresh\\Documents\\solartest\\venv\\Scripts\\python.exe', 'ppo_inference.py']' returned non-zero exit status 1.
+2026-01-17 12:01:01,607 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:02:58 IST)" executed successfully
+2026-01-17 12:16:11,017 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 12:16:11,017 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 12:16:11,018 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 12:16:11,018 - INFO - Scheduler started
+2026-01-17 12:18:11,021 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:18:11 IST)" (scheduled at 2026-01-17 12:18:11.017608+05:30)
+2026-01-17 12:18:11,022 - INFO - Pipeline started
+2026-01-17 12:18:11,639 - INFO - Forecast generation completed
+2026-01-17 12:18:13,747 - INFO - PPO inference completed
+2026-01-17 12:18:13,747 - INFO - Pipeline finished successfully
+2026-01-17 12:18:13,747 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:20:11 IST)" executed successfully
+2026-01-17 12:20:11,033 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:22:11 IST)" (scheduled at 2026-01-17 12:20:11.017608+05:30)
+2026-01-17 12:20:11,033 - INFO - Pipeline started
+2026-01-17 12:20:11,624 - INFO - Forecast generation completed
+2026-01-17 12:20:13,775 - INFO - PPO inference completed
+2026-01-17 12:20:13,776 - INFO - Pipeline finished successfully
+2026-01-17 12:20:13,776 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:22:11 IST)" executed successfully
+2026-01-17 12:22:11,034 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:24:11 IST)" (scheduled at 2026-01-17 12:22:11.017608+05:30)
+2026-01-17 12:22:11,034 - INFO - Pipeline started
+2026-01-17 12:22:11,570 - INFO - Forecast generation completed
+2026-01-17 12:22:13,522 - INFO - PPO inference completed
+2026-01-17 12:22:13,522 - INFO - Pipeline finished successfully
+2026-01-17 12:22:13,522 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:24:11 IST)" executed successfully
+2026-01-17 12:24:11,030 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:26:11 IST)" (scheduled at 2026-01-17 12:24:11.017608+05:30)
+2026-01-17 12:24:11,030 - INFO - Pipeline started
+2026-01-17 12:24:12,080 - INFO - Forecast generation completed
+2026-01-17 12:24:15,888 - INFO - PPO inference completed
+2026-01-17 12:24:15,888 - INFO - Pipeline finished successfully
+2026-01-17 12:24:15,888 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:26:11 IST)" executed successfully
+2026-01-17 12:26:11,026 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:28:11 IST)" (scheduled at 2026-01-17 12:26:11.017608+05:30)
+2026-01-17 12:26:11,027 - INFO - Pipeline started
+2026-01-17 12:26:11,566 - INFO - Forecast generation completed
+2026-01-17 12:26:13,626 - INFO - PPO inference completed
+2026-01-17 12:26:13,626 - INFO - Pipeline finished successfully
+2026-01-17 12:26:13,626 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:28:11 IST)" executed successfully
+2026-01-17 12:28:11,033 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:30:11 IST)" (scheduled at 2026-01-17 12:28:11.017608+05:30)
+2026-01-17 12:28:11,033 - INFO - Pipeline started
+2026-01-17 12:28:11,608 - INFO - Forecast generation completed
+2026-01-17 12:28:13,659 - INFO - PPO inference completed
+2026-01-17 12:28:13,659 - INFO - Pipeline finished successfully
+2026-01-17 12:28:13,659 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:30:11 IST)" executed successfully
+2026-01-17 12:30:11,021 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:32:11 IST)" (scheduled at 2026-01-17 12:30:11.017608+05:30)
+2026-01-17 12:30:11,022 - INFO - Pipeline started
+2026-01-17 12:30:11,645 - INFO - Forecast generation completed
+2026-01-17 12:30:13,855 - INFO - PPO inference completed
+2026-01-17 12:30:13,855 - INFO - Pipeline finished successfully
+2026-01-17 12:30:13,855 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:32:11 IST)" executed successfully
+2026-01-17 12:32:11,023 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:34:11 IST)" (scheduled at 2026-01-17 12:32:11.017608+05:30)
+2026-01-17 12:32:11,023 - INFO - Pipeline started
+2026-01-17 12:32:11,659 - INFO - Forecast generation completed
+2026-01-17 12:32:12,110 - ERROR - Pipeline failed: Command '['C:\\Users\\Suresh\\Documents\\solartest\\venv\\Scripts\\python.exe', 'ppo_inference.py']' returned non-zero exit status 3221225786.
+2026-01-17 12:32:12,111 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 12:34:11 IST)" executed successfully
+2026-01-17 13:49:22,034 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 13:49:22,034 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 13:49:22,035 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 13:49:22,035 - INFO - Scheduler started
+2026-01-17 14:11:06,011 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 14:11:06,011 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 14:11:06,012 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 14:11:06,013 - INFO - Scheduler started
+2026-01-17 14:13:06,019 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:13:06 IST)" (scheduled at 2026-01-17 14:13:06.011478+05:30)
+2026-01-17 14:13:06,020 - INFO - Pipeline started
+2026-01-17 14:13:08,349 - INFO - Forecast generation completed
+2026-01-17 14:13:16,541 - INFO - PPO inference completed
+2026-01-17 14:13:16,542 - INFO - Pipeline finished successfully
+2026-01-17 14:13:16,542 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:15:06 IST)" executed successfully
+2026-01-17 14:15:06,012 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:17:06 IST)" (scheduled at 2026-01-17 14:15:06.011478+05:30)
+2026-01-17 14:15:06,013 - INFO - Pipeline started
+2026-01-17 14:15:06,894 - INFO - Forecast generation completed
+2026-01-17 14:15:09,803 - INFO - PPO inference completed
+2026-01-17 14:15:09,803 - INFO - Pipeline finished successfully
+2026-01-17 14:15:09,803 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:17:06 IST)" executed successfully
+2026-01-17 14:17:06,021 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:19:06 IST)" (scheduled at 2026-01-17 14:17:06.011478+05:30)
+2026-01-17 14:17:06,021 - INFO - Pipeline started
+2026-01-17 14:17:06,783 - INFO - Forecast generation completed
+2026-01-17 14:17:09,579 - INFO - PPO inference completed
+2026-01-17 14:17:09,580 - INFO - Pipeline finished successfully
+2026-01-17 14:17:09,580 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:19:06 IST)" executed successfully
+2026-01-17 14:19:06,016 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:21:06 IST)" (scheduled at 2026-01-17 14:19:06.011478+05:30)
+2026-01-17 14:19:06,016 - INFO - Pipeline started
+2026-01-17 14:19:06,700 - INFO - Forecast generation completed
+2026-01-17 14:19:09,299 - INFO - PPO inference completed
+2026-01-17 14:19:09,300 - INFO - Pipeline finished successfully
+2026-01-17 14:19:09,300 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:21:06 IST)" executed successfully
+2026-01-17 14:21:06,024 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:23:06 IST)" (scheduled at 2026-01-17 14:21:06.011478+05:30)
+2026-01-17 14:21:06,024 - INFO - Pipeline started
+2026-01-17 14:21:06,729 - INFO - Forecast generation completed
+2026-01-17 14:21:09,104 - INFO - PPO inference completed
+2026-01-17 14:21:09,105 - INFO - Pipeline finished successfully
+2026-01-17 14:21:09,105 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:23:06 IST)" executed successfully
+2026-01-17 14:23:06,023 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:25:06 IST)" (scheduled at 2026-01-17 14:23:06.011478+05:30)
+2026-01-17 14:23:06,023 - INFO - Pipeline started
+2026-01-17 14:23:07,498 - INFO - Forecast generation completed
+2026-01-17 14:23:13,282 - INFO - PPO inference completed
+2026-01-17 14:23:13,282 - INFO - Pipeline finished successfully
+2026-01-17 14:23:13,282 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:25:06 IST)" executed successfully
+2026-01-17 14:25:06,012 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:27:06 IST)" (scheduled at 2026-01-17 14:25:06.011478+05:30)
+2026-01-17 14:25:06,012 - INFO - Pipeline started
+2026-01-17 14:25:06,693 - INFO - Forecast generation completed
+2026-01-17 14:25:09,308 - INFO - PPO inference completed
+2026-01-17 14:25:09,309 - INFO - Pipeline finished successfully
+2026-01-17 14:25:09,309 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:27:06 IST)" executed successfully
+2026-01-17 14:27:06,013 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:29:06 IST)" (scheduled at 2026-01-17 14:27:06.011478+05:30)
+2026-01-17 14:27:06,013 - INFO - Pipeline started
+2026-01-17 14:27:06,694 - INFO - Forecast generation completed
+2026-01-17 14:27:09,169 - INFO - PPO inference completed
+2026-01-17 14:27:09,169 - INFO - Pipeline finished successfully
+2026-01-17 14:27:09,169 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:29:06 IST)" executed successfully
+2026-01-17 14:29:06,022 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:31:06 IST)" (scheduled at 2026-01-17 14:29:06.011478+05:30)
+2026-01-17 14:29:06,023 - INFO - Pipeline started
+2026-01-17 14:29:07,526 - INFO - Forecast generation completed
+2026-01-17 14:29:13,215 - INFO - PPO inference completed
+2026-01-17 14:29:13,215 - INFO - Pipeline finished successfully
+2026-01-17 14:29:13,215 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:31:06 IST)" executed successfully
+2026-01-17 14:31:06,020 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:33:06 IST)" (scheduled at 2026-01-17 14:31:06.011478+05:30)
+2026-01-17 14:31:06,020 - INFO - Pipeline started
+2026-01-17 14:31:07,466 - INFO - Forecast generation completed
+2026-01-17 14:31:13,127 - INFO - PPO inference completed
+2026-01-17 14:31:13,128 - INFO - Pipeline finished successfully
+2026-01-17 14:31:13,128 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:33:06 IST)" executed successfully
+2026-01-17 14:33:06,017 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:35:06 IST)" (scheduled at 2026-01-17 14:33:06.011478+05:30)
+2026-01-17 14:33:06,017 - INFO - Pipeline started
+2026-01-17 14:33:07,476 - INFO - Forecast generation completed
+2026-01-17 14:33:13,218 - INFO - PPO inference completed
+2026-01-17 14:33:13,218 - INFO - Pipeline finished successfully
+2026-01-17 14:33:13,218 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:35:06 IST)" executed successfully
+2026-01-17 14:35:06,021 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:37:06 IST)" (scheduled at 2026-01-17 14:35:06.011478+05:30)
+2026-01-17 14:35:06,022 - INFO - Pipeline started
+2026-01-17 14:35:07,482 - INFO - Forecast generation completed
+2026-01-17 14:35:13,342 - INFO - PPO inference completed
+2026-01-17 14:35:13,342 - INFO - Pipeline finished successfully
+2026-01-17 14:35:13,343 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 14:37:06 IST)" executed successfully
+2026-01-17 15:21:29,910 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 15:21:29,910 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 15:21:29,911 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 15:21:29,911 - INFO - Scheduler started
+2026-01-17 15:23:29,926 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:23:29 IST)" (scheduled at 2026-01-17 15:23:29.910540+05:30)
+2026-01-17 15:23:29,927 - INFO - Pipeline started
+2026-01-17 15:23:30,654 - INFO - Forecast generation completed
+2026-01-17 15:23:33,500 - INFO - PPO inference completed
+2026-01-17 15:23:33,500 - INFO - Pipeline finished successfully
+2026-01-17 15:23:33,500 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:25:29 IST)" executed successfully
+2026-01-17 15:25:29,916 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:27:29 IST)" (scheduled at 2026-01-17 15:25:29.910540+05:30)
+2026-01-17 15:25:29,917 - INFO - Pipeline started
+2026-01-17 15:25:30,728 - INFO - Forecast generation completed
+2026-01-17 15:25:33,585 - INFO - PPO inference completed
+2026-01-17 15:25:33,585 - INFO - Pipeline finished successfully
+2026-01-17 15:25:33,586 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:27:29 IST)" executed successfully
+2026-01-17 15:27:29,927 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:29:29 IST)" (scheduled at 2026-01-17 15:27:29.910540+05:30)
+2026-01-17 15:27:29,928 - INFO - Pipeline started
+2026-01-17 15:27:30,666 - INFO - Forecast generation completed
+2026-01-17 15:27:33,433 - INFO - PPO inference completed
+2026-01-17 15:27:33,434 - INFO - Pipeline finished successfully
+2026-01-17 15:27:33,434 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:29:29 IST)" executed successfully
+2026-01-17 15:29:29,923 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:31:29 IST)" (scheduled at 2026-01-17 15:29:29.910540+05:30)
+2026-01-17 15:29:29,924 - INFO - Pipeline started
+2026-01-17 15:29:32,555 - INFO - Forecast generation completed
+2026-01-17 15:29:41,531 - INFO - PPO inference completed
+2026-01-17 15:29:41,532 - INFO - Pipeline finished successfully
+2026-01-17 15:29:41,532 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:31:29 IST)" executed successfully
+2026-01-17 15:31:29,917 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:33:29 IST)" (scheduled at 2026-01-17 15:31:29.910540+05:30)
+2026-01-17 15:31:29,918 - INFO - Pipeline started
+2026-01-17 15:31:33,317 - INFO - Forecast generation completed
+2026-01-17 15:31:44,781 - INFO - PPO inference completed
+2026-01-17 15:31:44,782 - INFO - Pipeline finished successfully
+2026-01-17 15:31:44,782 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:33:29 IST)" executed successfully
+2026-01-17 15:40:38,795 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-17 15:40:38,795 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-17 15:40:38,796 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-17 15:40:38,796 - INFO - Scheduler started
+2026-01-17 15:42:38,797 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:42:38 IST)" (scheduled at 2026-01-17 15:42:38.795653+05:30)
+2026-01-17 15:42:38,798 - INFO - Pipeline started
+2026-01-17 15:42:39,452 - INFO - Forecast generation completed
+2026-01-17 15:42:42,376 - INFO - PPO inference completed
+2026-01-17 15:42:42,376 - INFO - Pipeline finished successfully
+2026-01-17 15:42:42,376 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:44:38 IST)" executed successfully
+2026-01-17 15:44:38,801 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:46:38 IST)" (scheduled at 2026-01-17 15:44:38.795653+05:30)
+2026-01-17 15:44:38,802 - INFO - Pipeline started
+2026-01-17 15:44:39,632 - INFO - Forecast generation completed
+2026-01-17 15:44:43,087 - INFO - PPO inference completed
+2026-01-17 15:44:43,087 - INFO - Pipeline finished successfully
+2026-01-17 15:44:43,087 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:46:38 IST)" executed successfully
+2026-01-17 15:46:38,806 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:48:38 IST)" (scheduled at 2026-01-17 15:46:38.795653+05:30)
+2026-01-17 15:46:38,807 - INFO - Pipeline started
+2026-01-17 15:46:40,512 - INFO - Forecast generation completed
+2026-01-17 15:46:48,876 - INFO - PPO inference completed
+2026-01-17 15:46:48,877 - INFO - Pipeline finished successfully
+2026-01-17 15:46:48,877 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:48:38 IST)" executed successfully
+2026-01-17 15:48:38,796 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:50:38 IST)" (scheduled at 2026-01-17 15:48:38.795653+05:30)
+2026-01-17 15:48:38,796 - INFO - Pipeline started
+2026-01-17 15:48:39,597 - INFO - Forecast generation completed
+2026-01-17 15:48:42,908 - INFO - PPO inference completed
+2026-01-17 15:48:42,908 - INFO - Pipeline finished successfully
+2026-01-17 15:48:42,908 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:50:38 IST)" executed successfully
+2026-01-17 15:50:38,805 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:52:38 IST)" (scheduled at 2026-01-17 15:50:38.795653+05:30)
+2026-01-17 15:50:38,805 - INFO - Pipeline started
+2026-01-17 15:50:39,657 - INFO - Forecast generation completed
+2026-01-17 15:50:43,464 - INFO - PPO inference completed
+2026-01-17 15:50:43,464 - INFO - Pipeline finished successfully
+2026-01-17 15:50:43,464 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:52:38 IST)" executed successfully
+2026-01-17 15:52:38,799 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:54:38 IST)" (scheduled at 2026-01-17 15:52:38.795653+05:30)
+2026-01-17 15:52:38,799 - INFO - Pipeline started
+2026-01-17 15:52:39,620 - INFO - Forecast generation completed
+2026-01-17 15:52:49,806 - INFO - PPO inference completed
+2026-01-17 15:52:49,806 - INFO - Pipeline finished successfully
+2026-01-17 15:52:49,807 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:54:38 IST)" executed successfully
+2026-01-17 15:54:38,798 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:56:38 IST)" (scheduled at 2026-01-17 15:54:38.795653+05:30)
+2026-01-17 15:54:38,798 - INFO - Pipeline started
+2026-01-17 15:54:39,429 - INFO - Forecast generation completed
+2026-01-17 15:54:42,162 - INFO - PPO inference completed
+2026-01-17 15:54:42,162 - INFO - Pipeline finished successfully
+2026-01-17 15:54:42,162 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-17 15:56:38 IST)" executed successfully
+2026-01-19 20:08:32,351 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-19 20:08:32,351 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-19 20:08:32,352 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-19 20:08:32,352 - INFO - Scheduler started
+2026-01-19 20:10:32,354 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:10:32 IST)" (scheduled at 2026-01-19 20:10:32.350861+05:30)
+2026-01-19 20:10:32,354 - INFO - Pipeline started
+2026-01-19 20:10:33,376 - INFO - Forecast generation completed
+2026-01-19 20:10:36,215 - INFO - PPO inference completed
+2026-01-19 20:10:36,215 - INFO - Pipeline finished successfully
+2026-01-19 20:10:36,215 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:12:32 IST)" executed successfully
+2026-01-19 20:12:32,367 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:14:32 IST)" (scheduled at 2026-01-19 20:12:32.350861+05:30)
+2026-01-19 20:12:32,367 - INFO - Pipeline started
+2026-01-19 20:12:34,480 - INFO - Forecast generation completed
+2026-01-19 20:12:42,045 - INFO - PPO inference completed
+2026-01-19 20:12:42,045 - INFO - Pipeline finished successfully
+2026-01-19 20:12:42,045 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:14:32 IST)" executed successfully
+2026-01-19 20:14:32,351 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:16:32 IST)" (scheduled at 2026-01-19 20:14:32.350861+05:30)
+2026-01-19 20:14:32,352 - INFO - Pipeline started
+2026-01-19 20:14:33,167 - INFO - Forecast generation completed
+2026-01-19 20:14:36,164 - INFO - PPO inference completed
+2026-01-19 20:14:36,165 - INFO - Pipeline finished successfully
+2026-01-19 20:14:36,165 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:16:32 IST)" executed successfully
+2026-01-19 20:16:32,351 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:18:32 IST)" (scheduled at 2026-01-19 20:16:32.350861+05:30)
+2026-01-19 20:16:32,352 - INFO - Pipeline started
+2026-01-19 20:16:33,099 - INFO - Forecast generation completed
+2026-01-19 20:16:35,910 - INFO - PPO inference completed
+2026-01-19 20:16:35,910 - INFO - Pipeline finished successfully
+2026-01-19 20:16:35,910 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:18:32 IST)" executed successfully
+2026-01-19 20:40:40,566 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-19 20:40:40,566 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-19 20:40:40,567 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-19 20:40:40,567 - INFO - Scheduler started
+2026-01-19 20:42:40,568 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:42:40 IST)" (scheduled at 2026-01-19 20:42:40.566289+05:30)
+2026-01-19 20:42:40,568 - INFO - Pipeline started
+2026-01-19 20:42:42,401 - INFO - Forecast generation completed
+2026-01-19 20:42:49,964 - INFO - PPO inference completed
+2026-01-19 20:42:49,964 - INFO - Pipeline finished successfully
+2026-01-19 20:42:49,964 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:44:40 IST)" executed successfully
+2026-01-19 20:44:40,582 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:46:40 IST)" (scheduled at 2026-01-19 20:44:40.566289+05:30)
+2026-01-19 20:44:40,583 - INFO - Pipeline started
+2026-01-19 20:44:42,333 - INFO - Forecast generation completed
+2026-01-19 20:44:50,194 - INFO - PPO inference completed
+2026-01-19 20:44:50,194 - INFO - Pipeline finished successfully
+2026-01-19 20:44:50,194 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:46:40 IST)" executed successfully
+2026-01-19 20:46:40,584 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:48:40 IST)" (scheduled at 2026-01-19 20:46:40.566289+05:30)
+2026-01-19 20:46:40,584 - INFO - Pipeline started
+2026-01-19 20:46:42,746 - INFO - Forecast generation completed
+2026-01-19 20:46:49,974 - INFO - PPO inference completed
+2026-01-19 20:46:49,974 - INFO - Pipeline finished successfully
+2026-01-19 20:46:49,975 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 20:48:40 IST)" executed successfully
+2026-01-19 21:04:37,775 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-19 21:04:37,775 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-19 21:04:37,776 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-19 21:04:37,776 - INFO - Scheduler started
+2026-01-19 21:06:37,786 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 21:06:37 IST)" (scheduled at 2026-01-19 21:06:37.775227+05:30)
+2026-01-19 21:06:37,787 - INFO - Pipeline started
+2026-01-19 21:06:38,591 - INFO - Forecast generation completed
+2026-01-19 21:06:42,328 - INFO - PPO inference completed
+2026-01-19 21:06:42,328 - INFO - Pipeline finished successfully
+2026-01-19 21:06:42,328 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 21:08:37 IST)" executed successfully
+2026-01-19 21:57:43,907 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-19 21:57:43,909 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-19 21:57:43,911 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-19 21:57:43,911 - INFO - Scheduler started
+2026-01-19 21:59:43,925 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 21:59:43 IST)" (scheduled at 2026-01-19 21:59:43.907202+05:30)
+2026-01-19 21:59:43,925 - INFO - Pipeline started
+2026-01-19 21:59:45,097 - INFO - Forecast generation completed
+2026-01-19 21:59:48,613 - INFO - PPO inference completed
+2026-01-19 21:59:48,614 - INFO - Pipeline finished successfully
+2026-01-19 21:59:48,614 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-19 22:01:43 IST)" executed successfully
+2026-01-20 09:53:33,834 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-20 09:53:33,834 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-20 09:53:33,836 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-20 09:53:33,837 - INFO - Scheduler started
+2026-01-20 09:55:33,847 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 09:55:33 IST)" (scheduled at 2026-01-20 09:55:33.833836+05:30)
+2026-01-20 09:55:33,848 - INFO - Pipeline started
+2026-01-20 09:55:35,606 - INFO - Forecast generation completed
+2026-01-20 09:55:43,525 - INFO - PPO inference completed
+2026-01-20 09:55:43,525 - INFO - Pipeline finished successfully
+2026-01-20 09:55:43,526 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 09:57:33 IST)" executed successfully
+2026-01-20 09:57:33,838 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 09:59:33 IST)" (scheduled at 2026-01-20 09:57:33.833836+05:30)
+2026-01-20 09:57:33,839 - INFO - Pipeline started
+2026-01-20 09:57:34,535 - INFO - Forecast generation completed
+2026-01-20 09:57:36,997 - INFO - PPO inference completed
+2026-01-20 09:57:36,997 - INFO - Pipeline finished successfully
+2026-01-20 09:57:36,997 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 09:59:33 IST)" executed successfully
+2026-01-20 09:59:33,834 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:01:33 IST)" (scheduled at 2026-01-20 09:59:33.833836+05:30)
+2026-01-20 09:59:33,834 - INFO - Pipeline started
+2026-01-20 09:59:34,528 - INFO - Forecast generation completed
+2026-01-20 09:59:37,266 - INFO - PPO inference completed
+2026-01-20 09:59:37,266 - INFO - Pipeline finished successfully
+2026-01-20 09:59:37,266 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:01:33 IST)" executed successfully
+2026-01-20 10:01:33,842 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:03:33 IST)" (scheduled at 2026-01-20 10:01:33.833836+05:30)
+2026-01-20 10:01:33,843 - INFO - Pipeline started
+2026-01-20 10:01:36,057 - INFO - Forecast generation completed
+2026-01-20 10:01:39,830 - INFO - PPO inference completed
+2026-01-20 10:01:39,830 - INFO - Pipeline finished successfully
+2026-01-20 10:01:39,831 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:03:33 IST)" executed successfully
+2026-01-20 10:03:33,850 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:05:33 IST)" (scheduled at 2026-01-20 10:03:33.833836+05:30)
+2026-01-20 10:03:33,850 - INFO - Pipeline started
+2026-01-20 10:03:34,532 - INFO - Forecast generation completed
+2026-01-20 10:03:37,340 - INFO - PPO inference completed
+2026-01-20 10:03:37,340 - INFO - Pipeline finished successfully
+2026-01-20 10:03:37,340 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:05:33 IST)" executed successfully
+2026-01-20 10:05:33,844 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:07:33 IST)" (scheduled at 2026-01-20 10:05:33.833836+05:30)
+2026-01-20 10:05:33,844 - INFO - Pipeline started
+2026-01-20 10:05:35,462 - INFO - Forecast generation completed
+2026-01-20 10:05:42,977 - INFO - PPO inference completed
+2026-01-20 10:05:42,977 - INFO - Pipeline finished successfully
+2026-01-20 10:05:42,977 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:07:33 IST)" executed successfully
+2026-01-20 10:07:33,848 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:09:33 IST)" (scheduled at 2026-01-20 10:07:33.833836+05:30)
+2026-01-20 10:07:33,849 - INFO - Pipeline started
+2026-01-20 10:07:34,558 - INFO - Forecast generation completed
+2026-01-20 10:07:37,384 - INFO - PPO inference completed
+2026-01-20 10:07:37,384 - INFO - Pipeline finished successfully
+2026-01-20 10:07:37,384 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:09:33 IST)" executed successfully
+2026-01-20 10:09:33,846 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:11:33 IST)" (scheduled at 2026-01-20 10:09:33.833836+05:30)
+2026-01-20 10:09:33,846 - INFO - Pipeline started
+2026-01-20 10:09:34,507 - INFO - Forecast generation completed
+2026-01-20 10:09:36,913 - INFO - PPO inference completed
+2026-01-20 10:09:36,913 - INFO - Pipeline finished successfully
+2026-01-20 10:09:36,913 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:11:33 IST)" executed successfully
+2026-01-20 10:11:33,841 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:13:33 IST)" (scheduled at 2026-01-20 10:11:33.833836+05:30)
+2026-01-20 10:11:33,841 - INFO - Pipeline started
+2026-01-20 10:11:34,520 - INFO - Forecast generation completed
+2026-01-20 10:11:36,946 - INFO - PPO inference completed
+2026-01-20 10:11:36,946 - INFO - Pipeline finished successfully
+2026-01-20 10:11:36,946 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:13:33 IST)" executed successfully
+2026-01-20 10:13:33,849 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:15:33 IST)" (scheduled at 2026-01-20 10:13:33.833836+05:30)
+2026-01-20 10:13:33,849 - INFO - Pipeline started
+2026-01-20 10:13:35,650 - INFO - Forecast generation completed
+2026-01-20 10:13:42,896 - INFO - PPO inference completed
+2026-01-20 10:13:42,896 - INFO - Pipeline finished successfully
+2026-01-20 10:13:42,897 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 10:15:33 IST)" executed successfully
+2026-01-20 10:29:13,638 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-20 10:29:13,638 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-20 10:29:13,638 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-20 10:29:13,638 - INFO - Scheduler started
+2026-01-20 16:43:03,205 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-20 16:43:03,205 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-20 16:43:03,206 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-20 16:43:03,206 - INFO - Scheduler started
+2026-01-20 16:45:03,222 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:45:03 IST)" (scheduled at 2026-01-20 16:45:03.205333+05:30)
+2026-01-20 16:45:03,222 - INFO - Pipeline started
+2026-01-20 16:45:05,346 - INFO - Forecast generation completed
+2026-01-20 16:45:14,673 - INFO - PPO inference completed
+2026-01-20 16:45:14,673 - INFO - Pipeline finished successfully
+2026-01-20 16:45:14,673 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:47:03 IST)" executed successfully
+2026-01-20 16:47:03,211 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:49:03 IST)" (scheduled at 2026-01-20 16:47:03.205333+05:30)
+2026-01-20 16:47:03,212 - INFO - Pipeline started
+2026-01-20 16:47:05,465 - INFO - Forecast generation completed
+2026-01-20 16:47:14,904 - INFO - PPO inference completed
+2026-01-20 16:47:14,904 - INFO - Pipeline finished successfully
+2026-01-20 16:47:14,904 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:49:03 IST)" executed successfully
+2026-01-20 16:49:03,206 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:51:03 IST)" (scheduled at 2026-01-20 16:49:03.205333+05:30)
+2026-01-20 16:49:03,206 - INFO - Pipeline started
+2026-01-20 16:49:04,961 - INFO - Forecast generation completed
+2026-01-20 16:49:13,007 - INFO - PPO inference completed
+2026-01-20 16:49:13,008 - INFO - Pipeline finished successfully
+2026-01-20 16:49:13,008 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:51:03 IST)" executed successfully
+2026-01-20 16:51:03,219 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:53:03 IST)" (scheduled at 2026-01-20 16:51:03.205333+05:30)
+2026-01-20 16:51:03,220 - INFO - Pipeline started
+2026-01-20 16:51:04,926 - INFO - Forecast generation completed
+2026-01-20 16:51:12,123 - INFO - PPO inference completed
+2026-01-20 16:51:12,123 - INFO - Pipeline finished successfully
+2026-01-20 16:51:12,123 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:53:03 IST)" executed successfully
+2026-01-20 16:53:03,220 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:55:03 IST)" (scheduled at 2026-01-20 16:53:03.205333+05:30)
+2026-01-20 16:53:03,221 - INFO - Pipeline started
+2026-01-20 16:53:05,288 - INFO - Forecast generation completed
+2026-01-20 16:53:13,919 - INFO - PPO inference completed
+2026-01-20 16:53:13,919 - INFO - Pipeline finished successfully
+2026-01-20 16:53:13,919 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:55:03 IST)" executed successfully
+2026-01-20 16:55:03,207 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:57:03 IST)" (scheduled at 2026-01-20 16:55:03.205333+05:30)
+2026-01-20 16:55:03,207 - INFO - Pipeline started
+2026-01-20 16:55:04,319 - INFO - Forecast generation completed
+2026-01-20 16:55:08,792 - INFO - PPO inference completed
+2026-01-20 16:55:08,792 - INFO - Pipeline finished successfully
+2026-01-20 16:55:08,792 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:57:03 IST)" executed successfully
+2026-01-20 16:57:03,208 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:59:03 IST)" (scheduled at 2026-01-20 16:57:03.205333+05:30)
+2026-01-20 16:57:03,209 - INFO - Pipeline started
+2026-01-20 16:57:03,805 - INFO - Forecast generation completed
+2026-01-20 16:57:05,979 - INFO - PPO inference completed
+2026-01-20 16:57:05,979 - INFO - Pipeline finished successfully
+2026-01-20 16:57:05,979 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 16:59:03 IST)" executed successfully
+2026-01-20 16:59:03,222 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:01:03 IST)" (scheduled at 2026-01-20 16:59:03.205333+05:30)
+2026-01-20 16:59:03,222 - INFO - Pipeline started
+2026-01-20 16:59:04,419 - INFO - Forecast generation completed
+2026-01-20 16:59:08,549 - INFO - PPO inference completed
+2026-01-20 16:59:08,550 - INFO - Pipeline finished successfully
+2026-01-20 16:59:08,550 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:01:03 IST)" executed successfully
+2026-01-20 17:01:03,221 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:03:03 IST)" (scheduled at 2026-01-20 17:01:03.205333+05:30)
+2026-01-20 17:01:03,221 - INFO - Pipeline started
+2026-01-20 17:01:03,822 - INFO - Forecast generation completed
+2026-01-20 17:01:06,143 - INFO - PPO inference completed
+2026-01-20 17:01:06,143 - INFO - Pipeline finished successfully
+2026-01-20 17:01:06,143 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:03:03 IST)" executed successfully
+2026-01-20 17:13:14,113 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-20 17:13:14,113 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-20 17:13:14,114 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-20 17:13:14,114 - INFO - Scheduler started
+2026-01-20 17:15:14,130 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:15:14 IST)" (scheduled at 2026-01-20 17:15:14.113663+05:30)
+2026-01-20 17:15:14,130 - INFO - Pipeline started
+2026-01-20 17:15:15,192 - INFO - Forecast generation completed
+2026-01-20 17:15:18,631 - INFO - PPO inference completed
+2026-01-20 17:15:18,631 - INFO - Pipeline finished successfully
+2026-01-20 17:15:18,631 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 17:17:14 IST)" executed successfully
+2026-01-20 18:14:34,860 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-01-20 18:14:34,861 - INFO - Microgrid scheduler running (every 2 minutes)
+2026-01-20 18:14:34,862 - INFO - Added job "run_microgrid_pipeline" to job store "default"
+2026-01-20 18:14:34,862 - INFO - Scheduler started
+2026-01-20 18:16:34,873 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:16:34 IST)" (scheduled at 2026-01-20 18:16:34.860532+05:30)
+2026-01-20 18:16:34,874 - INFO - Pipeline started
+2026-01-20 18:16:36,725 - INFO - Forecast generation completed
+2026-01-20 18:16:41,906 - INFO - PPO inference completed
+2026-01-20 18:16:41,906 - INFO - Pipeline finished successfully
+2026-01-20 18:16:41,907 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:18:34 IST)" executed successfully
+2026-01-20 18:18:34,867 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:20:34 IST)" (scheduled at 2026-01-20 18:18:34.860532+05:30)
+2026-01-20 18:18:34,868 - INFO - Pipeline started
+2026-01-20 18:18:38,616 - INFO - Forecast generation completed
+2026-01-20 18:18:52,845 - INFO - PPO inference completed
+2026-01-20 18:18:52,846 - INFO - Pipeline finished successfully
+2026-01-20 18:18:52,846 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:20:34 IST)" executed successfully
+2026-01-20 18:20:34,867 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:22:34 IST)" (scheduled at 2026-01-20 18:20:34.860532+05:30)
+2026-01-20 18:20:34,867 - INFO - Pipeline started
+2026-01-20 18:20:38,663 - INFO - Forecast generation completed
+2026-01-20 18:20:50,008 - INFO - PPO inference completed
+2026-01-20 18:20:50,008 - INFO - Pipeline finished successfully
+2026-01-20 18:20:50,008 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:22:34 IST)" executed successfully
+2026-01-20 18:22:34,870 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:24:34 IST)" (scheduled at 2026-01-20 18:22:34.860532+05:30)
+2026-01-20 18:22:34,870 - INFO - Pipeline started
+2026-01-20 18:22:35,780 - INFO - Forecast generation completed
+2026-01-20 18:22:38,786 - INFO - PPO inference completed
+2026-01-20 18:22:38,786 - INFO - Pipeline finished successfully
+2026-01-20 18:22:38,786 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:24:34 IST)" executed successfully
+2026-01-20 18:24:34,871 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:26:34 IST)" (scheduled at 2026-01-20 18:24:34.860532+05:30)
+2026-01-20 18:24:34,871 - INFO - Pipeline started
+2026-01-20 18:24:37,787 - INFO - Forecast generation completed
+2026-01-20 18:24:50,131 - INFO - PPO inference completed
+2026-01-20 18:24:50,131 - INFO - Pipeline finished successfully
+2026-01-20 18:24:50,132 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:26:34 IST)" executed successfully
+2026-01-20 18:26:34,868 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:28:34 IST)" (scheduled at 2026-01-20 18:26:34.860532+05:30)
+2026-01-20 18:26:34,869 - INFO - Pipeline started
+2026-01-20 18:26:38,172 - INFO - Forecast generation completed
+2026-01-20 18:26:51,733 - INFO - PPO inference completed
+2026-01-20 18:26:51,734 - INFO - Pipeline finished successfully
+2026-01-20 18:26:51,734 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:28:34 IST)" executed successfully
+2026-01-20 18:28:34,875 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:30:34 IST)" (scheduled at 2026-01-20 18:28:34.860532+05:30)
+2026-01-20 18:28:34,876 - INFO - Pipeline started
+2026-01-20 18:28:37,872 - INFO - Forecast generation completed
+2026-01-20 18:28:50,372 - INFO - PPO inference completed
+2026-01-20 18:28:50,373 - INFO - Pipeline finished successfully
+2026-01-20 18:28:50,373 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:30:34 IST)" executed successfully
+2026-01-20 18:30:34,875 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:32:34 IST)" (scheduled at 2026-01-20 18:30:34.860532+05:30)
+2026-01-20 18:30:34,876 - INFO - Pipeline started
+2026-01-20 18:30:38,067 - INFO - Forecast generation completed
+2026-01-20 18:30:50,170 - INFO - PPO inference completed
+2026-01-20 18:30:50,170 - INFO - Pipeline finished successfully
+2026-01-20 18:30:50,171 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:32:34 IST)" executed successfully
+2026-01-20 18:32:34,870 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:34:34 IST)" (scheduled at 2026-01-20 18:32:34.860532+05:30)
+2026-01-20 18:32:34,870 - INFO - Pipeline started
+2026-01-20 18:32:37,638 - INFO - Forecast generation completed
+2026-01-20 18:32:50,484 - INFO - PPO inference completed
+2026-01-20 18:32:50,484 - INFO - Pipeline finished successfully
+2026-01-20 18:32:50,484 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:34:34 IST)" executed successfully
+2026-01-20 18:34:34,862 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:36:34 IST)" (scheduled at 2026-01-20 18:34:34.860532+05:30)
+2026-01-20 18:34:34,862 - INFO - Pipeline started
+2026-01-20 18:34:37,911 - INFO - Forecast generation completed
+2026-01-20 18:34:50,970 - INFO - PPO inference completed
+2026-01-20 18:34:50,970 - INFO - Pipeline finished successfully
+2026-01-20 18:34:50,970 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:36:34 IST)" executed successfully
+2026-01-20 18:36:34,867 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:38:34 IST)" (scheduled at 2026-01-20 18:36:34.860532+05:30)
+2026-01-20 18:36:34,868 - INFO - Pipeline started
+2026-01-20 18:36:38,228 - INFO - Forecast generation completed
+2026-01-20 18:36:50,613 - INFO - PPO inference completed
+2026-01-20 18:36:50,613 - INFO - Pipeline finished successfully
+2026-01-20 18:36:50,613 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:38:34 IST)" executed successfully
+2026-01-20 18:38:34,863 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:40:34 IST)" (scheduled at 2026-01-20 18:38:34.860532+05:30)
+2026-01-20 18:38:34,864 - INFO - Pipeline started
+2026-01-20 18:38:37,781 - INFO - Forecast generation completed
+2026-01-20 18:38:50,358 - INFO - PPO inference completed
+2026-01-20 18:38:50,358 - INFO - Pipeline finished successfully
+2026-01-20 18:38:50,359 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:40:34 IST)" executed successfully
+2026-01-20 18:40:34,864 - INFO - Running job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:42:34 IST)" (scheduled at 2026-01-20 18:40:34.860532+05:30)
+2026-01-20 18:40:34,864 - INFO - Pipeline started
+2026-01-20 18:40:37,981 - INFO - Forecast generation completed
+2026-01-20 18:40:50,628 - INFO - PPO inference completed
+2026-01-20 18:40:50,629 - INFO - Pipeline finished successfully
+2026-01-20 18:40:50,629 - INFO - Job "run_microgrid_pipeline (trigger: interval[0:02:00], next run at: 2026-01-20 18:42:34 IST)" executed successfully
